@@ -1,0 +1,146 @@
+.all-project{
+    padding: 50px 0 ;
+    background: url(../images/greybg-min.png);
+    .filter-project{
+        margin: 25px 0 ;
+        .oo{
+            border: 1px solid $mainColor ;
+            text-align: right !important ;
+            border-radius: 10px ;
+            padding: 10px ;
+            height: auto !important ;
+            line-height: normal !important;
+            color: $fontColor !important;
+            .list{
+                li{
+                    color: $fontColor ;
+                    font-size: 14px ;
+                    text-align: right ;
+                }
+            }
+            &:after {
+                border-bottom: 2px solid $mainColor;
+                border-right: 2px solid $mainColor;
+                width: 10px ;
+                height: 10px ;
+                margin-top: -6px;
+            }
+        }
+    } 
+}
+/*** Start Media Queries ***/
+@media only screen and (max-width: 479px){
+    .all-project{
+        padding: 10px 0 ;
+        .filter-project{
+            margin: 10px 0 ;
+            .col-md-4{
+                margin-bottom: 5px ;
+            }
+            .oo{
+                padding: 6px ;
+                font-size: 12px ;
+                .current{
+                    font-size: 12px ;
+                }
+                .list{
+                    li{
+                        font-size: 11px ;
+                    }
+                }
+                &:after {
+                    width: 8px ;
+                    height: 8px ;
+                    margin-top: -6px;
+                }
+            }
+        } 
+        .real-project{
+            .col-md-4{
+                margin-bottom: 8px ;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px){
+    .all-project{
+        padding: 20px 0 ;
+        .filter-project{
+            margin: 15px 0 ;
+            .col-md-4{
+                -ms-flex: 0 0 33.333333%;
+                flex: 0 0 33.333333%;
+                max-width: 33.333333%;
+                padding-right: 5px;
+                padding-left: 5px;
+            }
+            .col-md-4:first-of-type{
+                padding-right: 0 ;
+            }
+            .col-md-4:last-of-type{
+                padding-left: 0 ;
+            }
+            .oo{
+                padding: 6px ;
+                font-size: 13px ;
+                .current{
+                    font-size: 13px ;
+                }
+                .list{
+                    li{
+                        font-size: 12px ;
+                    }
+                }
+                &:after {
+                    width: 8px ;
+                    height: 8px ;
+                    margin-top: -6px;
+                }
+            }
+        } 
+        .real-project{
+            .col-md-4{
+                -ms-flex: 0 0 50%;
+                flex: 0 0 50%;
+                max-width: 50%;
+                margin-bottom: 10px ;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .all-project{
+        padding: 30px 0 ;
+        .filter-project{
+            margin: 20px 0 ;
+            .oo{
+                padding: 8px ;
+                font-size: 14px ;
+                .current{
+                    font-size: 14px ;
+                }
+                .list{
+                    li{
+                        font-size: 13px ;
+                    }
+                }
+                &:after {
+                    width: 8px ;
+                    height: 8px ;
+                    margin-top: -6px;
+                }
+            }
+        } 
+        .real-project{
+            .col-md-4{
+                margin-bottom: 15px ;
+            }
+        }
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .all-project{
+        padding: 40px 0 ;
+    }
+}
+/*** End Media Queries ***/

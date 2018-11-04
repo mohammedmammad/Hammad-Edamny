@@ -1,0 +1,738 @@
+body{
+    font-family: 'El Messiri', sans-serif;
+    // font-family: 'Cairo', sans-serif;
+    direction: rtl ;
+    text-align: right ;
+    overflow-x: hidden ;
+}
+*{
+    box-sizing: border-box ;
+    -webkit-box-sizing: border-box ;
+    -moz-box-sizing: border-box ;
+    -o-box-sizing: border-box ;
+    -ms-box-sizing: border-box ;
+    padding: 0 ;
+    margin: 0 ;
+    font-size: 15px ;
+}
+a{
+    outline: none ;
+    text-decoration: none !important ;
+    cursor: pointer !important ;
+}
+
+/*********************************************************************************************************/
+/************************************ Start Variables ************************************/
+$mainColor : RGB(2,176,164) ;
+$fontColor : RGB(95,95,95) ;
+/************************************ End Variables ************************************/
+.modal{
+    .tit-me{
+        margin-bottom: 0 ;
+        width: 100% ;
+    }
+    .close-icon{
+        outline: none ;
+        color: $mainColor ;
+        span{
+            font-size: 25px ;
+            cursor: pointer;
+        }
+    }
+    .modal-body {
+        text-align: center;
+        font-size: 14px;
+        color: $fontColor ;
+        font-family: cairo ;
+        padding: 0 20px ;
+    }
+    .btn-clo{
+        width: 100px ;
+        text-align: center ;
+        background: $mainColor ;
+        color: #fff ;
+        margin: 0 auto ;
+        outline: none ;
+        cursor: pointer;
+    }
+    .modal-dialog{
+        max-width: 600px;
+    }
+    .modal-content{
+        border: 2px solid $mainColor !important;
+    }
+    .modal-footer , .modal-header {
+        border: none ;
+    }
+}
+/*********************************************************************************************************/
+.tit-me{
+    margin-bottom: 25px ;
+    h4{
+        color: RGB(64,64,64) ;
+        font-size: 25px ;
+        padding-top: 7px ;
+        font-weight: 600 ;
+    }
+}
+/************************************ Start Import Pages ************************************/
+@import "header";
+@import "footer";
+@import "index";
+@import "det-project";
+@import "login";
+@import "all-project";
+@import "notification";
+@import "profile";
+@import "setting";
+@import "chat";
+/************************************ End Import Pages ************************************/
+.pick-arw-l::before{
+    content: "\f053" !important;
+    font-family: FontAwesome !important;    
+}
+.pick-arw-r::before{
+    content: "\f054" !important;
+    font-family: FontAwesome !important;    
+}
+div.datedropper .picker .pick-btns .pick-submit:after{
+    content: "\f00c" !important;
+    font-family: FontAwesome !important;    
+}
+div.datedropper.primary .pick-lg-b .pick-sl:before, div.datedropper.primary .pick-lg-h, div.datedropper.primary .pick-m, div.datedropper.primary .pick-submit, div.datedropper.primary:before {
+    background-color: $mainColor;
+}
+div.datedropper.primary .pick li span, div.datedropper.primary .pick-btn, div.datedropper.primary .pick-lg-b .pick-wke, div.datedropper.primary .pick-y.pick-jump {
+    color: $mainColor;
+}
+/*********************************************************************************************************/
+.progress{
+    height: 10px ;
+    overflow: visible ;
+    background: #fff ;
+    border: 1px solid RGB(213,213,213) ;
+    .progress-bar{
+        background: $mainColor ;
+        width: 0 ;
+        justify-content: flex-end;
+        span{
+            width: 30px ;
+            font-size: 10px ;
+            padding-top: 7px ;
+            height: 30px ;
+            border-radius: 50% ;
+            text-align: center ;
+            color: #fff ;
+            position: relative;
+            background: $mainColor ;
+            display: inline-block;
+            
+        }
+    }
+}
+.pagination{
+    justify-content: center ;
+    .page-link {
+        margin: 0 2px ;
+        color: $fontColor;
+        background-color: #fff;
+        border: 1px solid $mainColor;
+        transition:all .3s ease-in-out ;
+        &:hover{
+            background: $mainColor ;
+            color: #fff ;
+        }
+    }
+}
+
+#demos{
+    margin: 30px 0 ;
+    .columns{
+        width: 100% ;
+        position: relative;
+        padding-left: .9375rem;
+        padding-right: .9375rem;
+        float: left;
+        .owl-carousel{
+            .owl-nav{
+                height: 0 ;
+                margin: 0 ;
+            }
+            button.owl-next, button.owl-prev{
+                position: relative ;
+                top: -310px ;
+                width: 40px ;
+                height: 40px ;
+                text-align: center ;
+                background: $mainColor ;
+                outline: none ;
+                line-height: 1 ;
+                color: #fff ;
+                span{
+                    font-size: 28px ;
+                }
+            }
+            button.owl-next{
+                left: -50% ;
+            }
+            button.owl-prev{
+                left: 50% ;
+            }
+        }
+    }
+}
+.project{
+    margin: 15px auto ;
+    width: 90%;
+    border-radius: 7px ;
+    overflow: hidden;
+    background: RGB(251,251,251) ;
+    box-shadow: 2px 2px 4px RGB(237,237,237) ,
+                -2px -2px 4px RGB(237,237,237) ;
+    // border: 1px solid RGB(204,204,204) ;
+    img{
+        width: 100% ;
+        height: 185px ;
+        object-fit: cover ;
+    }
+    .support-det{
+        text-align: center ;
+        background: #fff ;
+        .link-user{
+            color: #222 ;
+            padding: 10px 0 ;
+            display: inline-block ;
+            transition: all .3s ease-in-out ;
+            &:hover{
+                color: $mainColor ;
+            }
+        }
+        .socail-icons{
+            a{
+                display: inline-block ;
+                margin: 10px 10px 15px ;
+                width: 35px ;
+                text-align: center ;
+                line-height: 35px ;
+                height: 35px ;
+                border-radius: 50% ;
+                box-shadow: 2px 2px 2px RGB(200, 200, 197) ;
+                i{
+                    color: $mainColor ;
+                }
+            }
+        }
+    }
+    .lat-icons{
+        display: flex ;
+        justify-content: center ;
+        width: 95% ;
+        padding: 7px 0 ;
+        border-bottom: 1px solid RGB(204,204,204) ;
+        margin-bottom: 16px ;
+        margin-right: 2.5% ;
+        div{
+            text-align: center ;
+            padding: 7px;
+            width: 33.333% ;
+            color: RGB(204,204,204) ;
+            border-left: 1px solid RGB(204,204,204) ;
+            span{
+                display: inline-block ;
+                padding: 0 5px ;
+            }
+        }
+        div:last-of-type{
+            border: none ;
+        }
+    }
+    .details-project{
+        background: RGB(251,251,251) ;
+        padding: 10px ;
+        h6{
+            font-weight: bold ;
+        }
+        .who-project{
+            font-size: 14px ;
+            color: $mainColor ;
+        }
+        .text-project{
+            font-size: 14px ;
+            color: $fontColor ;
+            height: 45px ;
+            overflow: hidden ;
+            margin-bottom:  0 ;
+        }
+        a{
+            display: inline-block;
+            position: relative;
+            color: RGB(2, 176, 164);
+            font-size: 13px;
+            right: 87%;
+            top: -8px;
+        }
+        .packet-project , .location-project{
+            font-size: 14px ;
+            color: $fontColor ;
+            margin-bottom: 8px ;
+            i{
+                display: inline-block ;
+                padding-left: 5px ;
+                color: $mainColor ;
+            }
+        }
+        .final-project{
+            display: flex ;
+            justify-content: center ;
+            width: 100% ;
+            margin-top: 7px ;
+            padding: 7px 0 ;
+            div{
+                text-align: center ;
+                width: 33.333% ;
+                span{
+                    display: inline-block ;
+                    padding: 0 5px ;
+                    font-size: 13px ;
+                }
+                .value{
+                    color: $fontColor ;
+                    display: block ;
+                }
+            }
+        }
+    }
+
+}
+
+/************************************ Start intel tel input ************************************/
+.iti-flag {
+    background-image: url(../images/flags.png) !important;
+}
+.intl-tel-input.allow-dropdown .selected-flag, .intl-tel-input.separate-dial-code .selected-flag {
+    width: 35px;
+}
+.intl-tel-input .selected-flag .iti-flag {
+    left: 1px;
+}
+.intl-tel-input .selected-flag .iti-arrow {
+    right: 3px;
+}
+.intl-tel-input {
+    width: 100%;
+}
+.intl-tel-input.allow-dropdown .flag-container:hover .selected-flag {
+    background: #fff ;
+}
+.intl-tel-input .country-list {
+    text-align: right;
+    color: #222 ;
+}
+/************************************ End intel tel input ************************************/
+/*** Start Media Queries ***/
+@media only screen and (max-width: 479px){
+    #demos{
+        margin: 10px 0 ;
+        .columns{
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+            .owl-carousel{
+                button.owl-next, button.owl-prev{
+                    top: -215px ;
+                    width: 30px ;
+                    height: 30px ;
+                }
+            }
+        }
+    }
+    .project{
+        margin: 0px auto ;
+        width: 100%;
+        img{
+            height: 120px ;
+        }
+        .support-det{
+            .link-user{
+                color: #222 ;
+                padding: 10px 0 ;
+                display: inline-block ;
+                transition: all .3s ease-in-out ;
+                &:hover{
+                    color: $mainColor ;
+                }
+            }
+            .socail-icons{
+                a{
+                    display: inline-block ;
+                    margin: 10px 10px 15px ;
+                    width: 35px ;
+                    text-align: center ;
+                    line-height: 35px ;
+                    height: 35px ;
+                    border-radius: 50% ;
+                    box-shadow: 2px 2px 2px RGB(200, 200, 197) ;
+                    i{
+                        color: $mainColor ;
+                    }
+                }
+            }
+        }
+        .lat-icons{
+            padding: 4px 0 ;
+            margin-bottom: 8px ;
+            div{
+                padding: 4px;
+                span{
+                    padding: 0 1px ;
+                    font-size: 12px ;
+                }
+            }
+        }
+        .details-project{
+            h6{
+                font-size: 14px ;
+            }
+            .who-project{
+                font-size: 12px ;
+                span{
+                    font-size: 12px ;
+                }
+            }
+            .text-project{
+                font-size: 12px ;
+                height: 38px ;
+            }
+            .packet-project , .location-project{
+                font-size: 12px ;
+                margin-bottom: 4px ;
+                span{
+                    font-size: 12px ;   
+                }
+                i{
+                    padding-left: 2px ;
+                }
+            }
+            .location-project{
+                margin-bottom: 16px ;
+            }
+            .final-project{
+                div{
+                    span{
+                        font-size: 12px ;
+                    }
+                    .value{
+                        font-size: 11px ;
+                    }
+                }
+            }
+        }
+    
+    }
+    .tit-me{
+        margin-bottom: 10px ;
+        h4{
+            font-size: 17px ;
+            padding-top: 4px ;
+        }
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px){
+    #demos{
+        margin: 10px 0 ;
+        .columns{
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+            .owl-carousel{
+                button.owl-next, button.owl-prev{
+                    top: -215px ;
+                    width: 30px ;
+                    height: 30px ;
+                }
+            }
+        }
+    }
+    .project{
+        margin: 0px auto ;
+        width: 100%;
+        img{
+            height: 120px ;
+        }
+        .support-det{
+            .link-user{
+                color: #222 ;
+                padding: 10px 0 ;
+                display: inline-block ;
+                transition: all .3s ease-in-out ;
+                &:hover{
+                    color: $mainColor ;
+                }
+            }
+            .socail-icons{
+                a{
+                    display: inline-block ;
+                    margin: 10px 10px 15px ;
+                    width: 35px ;
+                    text-align: center ;
+                    line-height: 35px ;
+                    height: 35px ;
+                    border-radius: 50% ;
+                    box-shadow: 2px 2px 2px RGB(200, 200, 197) ;
+                    i{
+                        color: $mainColor ;
+                    }
+                }
+            }
+        }
+        .lat-icons{
+            padding: 4px 0 ;
+            margin-bottom: 8px ;
+            div{
+                padding: 4px;
+                span{
+                    padding: 0 1px ;
+                    font-size: 12px ;
+                }
+            }
+        }
+        .details-project{
+            h6{
+                font-size: 14px ;
+            }
+            .who-project{
+                font-size: 12px ;
+                span{
+                    font-size: 12px ;
+                }
+            }
+            .text-project{
+                font-size: 12px ;
+                height: 38px ;
+            }
+            .packet-project , .location-project{
+                font-size: 12px ;
+                margin-bottom: 4px ;
+                span{
+                    font-size: 12px ;   
+                }
+                i{
+                    padding-left: 2px ;
+                }
+            }
+            .location-project{
+                margin-bottom: 16px ;
+            }
+            .final-project{
+                div{
+                    span{
+                        font-size: 12px ;
+                    }
+                    .value{
+                        font-size: 11px ;
+                    }
+                }
+            }
+        }
+    
+    }
+    .tit-me{
+        margin-bottom: 10px ;
+        h4{
+            font-size: 17px ;
+            padding-top: 5px ;
+        }
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    #demos{
+        margin: 10px 0 ;
+        .columns{
+            padding-left: 2rem;
+            padding-right: 2rem;
+            .owl-carousel{
+                button.owl-next, button.owl-prev{
+                    top: -277px ;
+                    width: 30px ;
+                    height: 30px ;
+                }
+            }
+        }
+    }
+    .project{
+        margin: 0px auto ;
+        width: 100%;
+        img{
+            height: 120px ;
+        }
+        .support-det{
+            .link-user{
+                color: #222 ;
+                padding: 10px 0 ;
+                display: inline-block ;
+                transition: all .3s ease-in-out ;
+                &:hover{
+                    color: $mainColor ;
+                }
+            }
+            .socail-icons{
+                a{
+                    display: inline-block ;
+                    margin: 10px 10px 15px ;
+                    width: 35px ;
+                    text-align: center ;
+                    line-height: 35px ;
+                    height: 35px ;
+                    border-radius: 50% ;
+                    box-shadow: 2px 2px 2px RGB(200, 200, 197) ;
+                    i{
+                        color: $mainColor ;
+                    }
+                }
+            }
+        }
+        .lat-icons{
+            padding: 4px 0 ;
+            margin-bottom: 8px ;
+            div{
+                padding: 4px;
+                span{
+                    padding: 0 1px ;
+                    font-size: 12px ;
+                }
+            }
+        }
+        .details-project{
+            h6{
+                font-size: 14px ;
+            }
+            .who-project{
+                font-size: 12px ;
+                span{
+                    font-size: 12px ;
+                }
+            }
+            .text-project{
+                font-size: 12px ;
+                height: 38px ;
+            }
+            .packet-project , .location-project{
+                font-size: 12px ;
+                margin-bottom: 4px ;
+                span{
+                    font-size: 12px ;   
+                }
+                i{
+                    padding-left: 2px ;
+                }
+            }
+            .location-project{
+                margin-bottom: 16px ;
+            }
+            .final-project{
+                div{
+                    span{
+                        font-size: 12px ;
+                    }
+                    .value{
+                        font-size: 11px ;
+                    }
+                }
+            }
+        }
+    
+    }
+    .tit-me{
+        margin-bottom: 15px ;
+        h4{
+            font-size: 21px ;
+            padding-top: 6px ;
+        }
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    #demos{
+        margin: 20px 0 ;
+        .columns{
+            padding-left: 2.9375rem;
+            padding-right: 2.9375rem;
+            .owl-carousel{
+                button.owl-next, button.owl-prev{
+                    top: -277px ;
+                }
+            }
+        }
+    }
+    .project{
+        margin: 10px auto ;
+        width: 100%;
+        img{
+            height: 150px ;
+        }
+        .support-det{
+            text-align: center ;
+            background: #fff ;
+            .link-user{
+                color: #222 ;
+                padding: 10px 0 ;
+                display: inline-block ;
+                transition: all .3s ease-in-out ;
+                &:hover{
+                    color: $mainColor ;
+                }
+            }
+            .socail-icons{
+                a{
+                    display: inline-block ;
+                    margin: 10px 10px 15px ;
+                    width: 35px ;
+                    text-align: center ;
+                    line-height: 35px ;
+                    height: 35px ;
+                    border-radius: 50% ;
+                    box-shadow: 2px 2px 2px RGB(200, 200, 197) ;
+                    i{
+                        color: $mainColor ;
+                    }
+                }
+            }
+        }
+        .lat-icons{
+            padding: 5px 0 ;
+            margin-bottom: 12px ;
+            div{
+                padding: 5px;
+                span{
+                    padding: 0 2px ;
+                }
+            }
+        }
+        .details-project{
+            .who-project{
+                font-size: 13px ;
+                span{
+                    font-size: 13px ;
+                }
+            }
+            .text-project{
+                font-size: 13px ;
+            }
+            .packet-project , .location-project{
+                margin-bottom: 6px ;
+                span{
+                    font-size: 13px ;
+                }
+                i{
+                    padding-left: 3px ;
+                }
+            }
+        }
+    
+    }
+    .tit-me{
+        margin-bottom: 20px ;
+        h4{
+            font-size: 23px ;
+            padding-top: 6px ;
+        }
+    }
+}
+/*** End Media Queries ***/

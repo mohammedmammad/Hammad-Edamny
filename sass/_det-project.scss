@@ -1,0 +1,294 @@
+.details-project{
+    background: url(../images/greybg-min.png);
+    background-size: cover ;
+    padding: 50px 0 ;
+}
+.in-project{
+    display: flex ;
+    margin: 20px auto ;
+    background: #fff ;
+    border-radius: 10px ;
+    overflow: hidden;
+    box-shadow: 1px 1px 2px RGB(200, 200, 197) ,
+                -1px -1px 2px RGB(200, 200, 197) ;
+    .sec-video{
+        width: 50% ;
+        .slider-me{
+            height: 100% !important;
+            .carousel {
+                height: 100% !important;
+                .carousel-inner{
+                    height: 100% !important;
+                    .carousel-item {
+                        height: 100%;
+                        video{
+                            height: 100% ;
+                            object-fit: cover ;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sec-text{
+        width: 50%;
+        .cont-all{
+            padding: 0 30px ;
+        }
+        .title-project{
+            display: flex ;
+            width: 100% ;
+            padding: 10px 0 ;
+            border-bottom: 1px solid RGB(210,210,210) ;
+            margin-bottom: 16px ;
+            .ml-auto{
+                span{
+                    font-weight: bold ;
+                }
+            }
+            .mr-auto{
+                a{
+                    display: inline-block ;
+                    padding: 0 7px ;
+                    i{
+                        color: $mainColor ;
+                        font-size: 20px ;
+                    }
+                }
+            }
+        }
+        .text-det-project{
+            font-weight: bold ;
+        }
+        .who-to{
+            color: $mainColor ;
+        }
+        .son-project{
+            display: flex ;
+            margin: 16px 0 ;
+            color: $fontColor ;
+            i{
+                color: $mainColor ;
+                font-size: 20px ;
+            }
+        }
+        .supports{
+            display: flex ;
+            justify-content: space-between ;
+            text-align: center ;
+            margin: 20px ;
+            span{
+                color: $fontColor ;
+                display: block ;
+                font-size: 14px ;
+            }
+            .value{
+                margin: 7px 0;
+                background: RGB(2, 176, 164);
+                color: #fff;
+                font-size: 16px;
+                width: 70px;
+                text-align: center;
+                border-radius: 37px;
+                padding: 3px 0;
+            }
+        }
+        .some-details{
+            margin: 12px 0 ;
+            display: flex ;
+            justify-content: space-between ;
+            div{
+                text-align: center ;
+                span{
+                    display: block ;
+                    font-weight: bold ;
+                    font-size: 14px ;
+                    i{
+                        color: $mainColor ;
+                        font-size: 20px ;
+                    }
+                }
+                .value{
+                    color: $fontColor ;
+                    padding: 7px 0 ;
+                    font-weight: normal ;
+                    font-size: 15px ;
+                }
+            }
+        }
+        .suspend{
+            display: block ;
+            width: 100% ;
+            background: $mainColor ;
+            color: #fff ;
+            text-align: center ;
+            padding: 10px 0 ;
+            font-size: 17px ;
+            border: none ;
+            outline: none ;
+            cursor: pointer;
+        }
+    }
+}
+.people-support{
+    margin: 20px 0 ;
+    .edit-title-support{
+        position: relative;
+        top: 30px ;
+    }
+    .supp{
+        .owl-next , .owl-prev{
+            top: -190px !important ;
+        }
+    }
+    .title-support{
+        margin-bottom: 10px ;
+        img{
+            width: 25px ;
+            object-fit: contain ;
+        }
+        span{
+            display: inline-block ;
+            padding-right: 5px ;
+            font-size: 18px ;
+        }
+    }
+}
+.cont-comment{
+    background: #fff ;
+    padding: 0px 20px ;
+    box-shadow:2px 2px 2px rgb(200, 200, 197) ,
+            -2px -2px 2px rgb(200, 200, 197) ;
+    .message{
+        padding: 0;
+        margin-bottom: 7px;
+        height: auto;
+        position: relative;
+        display: flex;
+        width: 93% ;
+        justify-content: flex-start;
+        border-bottom: 1px solid RGB(216,216,216) ;
+        padding: 20px 0 ;
+        img{
+            width: 65px ;
+            height: 65px ;
+            border-radius: 5px ;
+        }
+        .text-mess{
+            margin-right: 20px ;
+            width: calc(100% - 95px) !important;
+            .row{
+                padding: 0 ;
+                margin: 0 ;
+                .ml-auto{
+                    a{
+                        color: #222 ;
+                        transition: all .3s ease-in-out ;
+                        &:hover{
+                            color: $mainColor ;
+                        }
+                    }
+                }
+                .mr-auto{
+                    .data{
+                        font-size: 14px ;
+                        color: $fontColor ;
+                        display: inline-block ;
+                        margin-left: 7.5px ; 
+                        direction: ltr ;
+                    }   
+                    .del-now{
+                        cursor: pointer;
+                        display: inline-block;
+                        margin-right: 7.5px ;
+                        background: red ;
+                        border-radius: 50% ;
+                        width: 28px ;
+                        height: 28px ;
+                        line-height: 30px ;
+                        text-align: center ;
+                        color: #fff ;
+                    }
+                }
+            }
+            .said-text{
+                margin:8px 0 0 ;
+                color: $fontColor ;
+                width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+    form{
+        width: 93% ;
+        padding: 20px 0 ;
+        display: block ;
+        textarea{
+            width: 100% ;
+            height: 70px ;
+            border: none ;
+            outline: none ;
+            &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                color: $fontColor ;
+              }
+             &::-moz-placeholder { /* Firefox 19+ */
+                color: $fontColor;
+              }
+              &:-ms-input-placeholder { /* IE 10+ */
+                color: $fontColor;
+              }
+              &:-moz-placeholder { /* Firefox 18- */
+                color: $fontColor;
+              }
+        }
+        button{
+            display: block ;
+            width: 60px ;
+            height: 60px ;
+            margin-right: auto ;
+            border-radius: 50% ;
+            text-align: center ;
+            line-height: 73px ;
+            background: #fff ;
+            color: $mainColor  ;
+            box-shadow: 1px 1px 2px RGB(228,228,228), -1px -1px 2px RGB(228,228,228);
+            position: relative;
+            top: -38px;
+            cursor: pointer;
+            border: none ;
+            outline: none ;
+            transition: all .3s ease-in-out ;
+            &:hover{
+                background: $mainColor ;
+                color: #fff ;
+            }
+            i{
+                font-size: 30px ;
+            }
+        }
+    }
+}
+/*** Start Media Queries ***/
+@media only screen and (max-width: 479px){
+    .details-project{
+        padding: 10px 0 ;
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px){
+    .details-project{ 
+        padding: 20px 0 ;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .details-project{
+        padding: 30px 0 ;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .details-project{
+        padding: 40px 0 ;
+    }
+}
+/*** End Media Queries ***/

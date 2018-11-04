@@ -1,0 +1,690 @@
+.setting{
+    padding: 50px 0 ;
+    background: RGB(251,249,249) ;
+    .setting-form{
+        width: 70% ;
+        margin: 10px auto ;
+        form{
+            .cont-myimage {
+                border: 2px solid $mainColor; 
+                display: block ;
+                background: #fff ;
+                width: 160px ;
+                border-radius: 50% ;
+                margin: 0 auto ;
+                position: relative ;
+                text-align: center ;
+                top: 0 ;
+                height: 160px  ;
+                .colse-img-now{
+                    position: absolute;
+                    top: 11px;
+                    left: 32px;
+                    color: $mainColor;
+                    cursor: pointer;
+                    display: block;
+                    font-size: 23px;
+                    z-index: 5555;
+                }
+                img{
+                    position: absolute;
+                    top: 0 ;
+                    left: 0;
+                    width: 100% ;
+                    height: 100% ;
+                    border-radius: 50% ;
+                    object-fit: cover ;
+                    display: block ;
+                    z-index: 3;
+                }
+                input{
+                    display: none;
+                }
+                span{
+                    position: absolute ;
+                    display: block ;
+                    width: 45px ;
+                    border-radius: 50% ;
+                    z-index: 8;
+                    height: 45px;
+                    line-height: 62px ;
+                    cursor: pointer;
+                    text-align: center ;
+                    left: calc(50% - 22.5px);
+                    top: calc(50% - 22.5px);
+                    i{
+                        color: $mainColor ;
+                        font-size: 35px ;
+                    }
+                }
+            }
+            .cover-img{
+                width: 100% ;
+                background: url(../images/cover.jpg);
+                background-size: cover ;
+                height: 200px  ;
+                position: relative;
+                border: 1px solid RGB(225, 225, 225);
+                .overlay{
+                    background-color: rgba(20 , 20 , 20 , .5);
+                    position: absolute ;
+                    width: 100% ;
+                    height: 100% ;
+                }
+                .contt-image , .contt-video {
+                    display: block ;
+                    width: 100% ;
+                    position: relative ;
+                    text-align: center ;
+                    top: 0 ;
+                    height: 150px  ;
+                    .colse-img-now{
+                        position: absolute ;
+                        top: 5px ;
+                        left: 5px ;
+                        color: $mainColor ;
+                        cursor: pointer ;
+                        display: none ;
+                        z-index: 5555;
+                        font-size: 27px ;
+                        font-weight: bold ;
+                    }
+                    span{
+                        position: absolute ;
+                        top: calc(50% - 12px);
+                        left: calc(50% - 17px);
+                        cursor: pointer;
+                        i{
+                            font-size: 35px ;
+                            color: $mainColor ;
+                        }
+                    }
+                    img , video{
+                        position: absolute;
+                        top: 0 ;
+                        left: 0;
+                        width: 100% ;
+                        height: 100% ;
+                        object-fit: cover ;
+                        display: none ;
+                        z-index: 3;
+                    }
+                    video{
+                        object-fit: contain ;
+                    }
+                    input{
+                        display: none;
+                    }
+                }
+
+                .cont1{
+                    width: 49.4% ;
+                    height: 75px ;
+                    display: inline-block ;
+                }
+                .des-img{
+                    display: block ;
+                    background: #fff ;
+                    width: 100% ;
+                    z-index: 8;
+                    height: 48px;
+                    line-height: 48px;
+                    cursor: pointer;
+                    text-align: center ;
+                    position: relative;
+                    z-index: 555;
+                    color: $mainColor ;
+                    transition: all .3s ease-in-out ;
+                }
+            }
+            .coll-to-mg{
+                margin: 15px 0 !important;
+            }
+            label{
+                font-size: 14px ;
+                padding-right: 15px ;
+                color: $mainColor ;
+            }
+            .city-now{
+                visibility: hidden;
+            }
+            textarea , .oo , .cc ,input , button{
+                height: auto ;
+                line-height: normal ;
+                text-align: right !important ;
+                color: $fontColor !important;
+                width: 100% ;
+                background: #fff !important;
+                color: $fontColor ;
+                border: 1px solid RGB(235,235,235) !important ;
+                padding: 15px 10px !important;
+                outline: none !important;
+                .list{
+                    li{
+                        text-align: right ;
+                        font-size: 14px ;
+                    }
+                }
+                &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                    font-size: 14px ;
+                    color: $fontColor ;
+                }
+                &::-moz-placeholder { 
+                font-size: 14px ;
+                color:  $fontColor ;
+                }
+                &:-ms-input-placeholder { 
+                font-size: 14px ;
+                color:  $fontColor ;
+                }
+                &:-moz-placeholder { 
+                font-size: 14px ;
+                color: $fontColor ;
+                }
+            }
+            textarea{
+                resize: none ;
+                height: 150px;
+            }
+            .change-now{
+                display: block ;
+                width: 100px ;
+                text-align: center ;
+                padding: 10px ;
+                background: $mainColor ;
+                color: #fff ;
+                position: absolute;
+                left: 15px;
+                bottom: -20px ;
+            }
+            button{
+                background: $mainColor !important;
+                color: #fff !important;
+                cursor: pointer;
+                border: none ;
+                text-align: center !important ;
+                font-size: 16px !important;
+            }
+            .dell-all-pro{
+                text-align: center ;
+                display: block ;
+                width: 100% ;
+                color: red ;
+                margin-top: 10px ;
+            }
+            .cont-image {
+                border: 1px solid RGB(225, 225, 225); 
+                display: block ;
+                background: #fff ;
+                width: 100% ;
+                position: relative ;
+                text-align: center ;
+                top: 0 ;
+                height: 160px  ;
+                .colse-img-now{
+                    position: absolute ;
+                    top: 5px ;
+                    left: 5px ;
+                    color: $mainColor ;
+                    cursor: pointer ;
+                    display: none ;
+                    z-index: 5555;
+                }
+                img{
+                    position: absolute;
+                    top: 0 ;
+                    left: 0;
+                    width: 100% ;
+                    height: 100% ;
+                    object-fit: contain ;
+                    display: none ;
+                    z-index: 3;
+                }
+                input{
+                    display: none;
+                }
+                small{
+                    position: relative; 
+                    top: 35% ;
+                    color: RGB(114, 114, 112) ;
+                }
+                span{
+                    position: absolute ;
+                    display: block ;
+                    background: $mainColor ;
+                    width: 100% ;
+                    z-index: 8;
+                    height: 30px;
+                    line-height: 35px ;
+                    cursor: pointer;
+                    text-align: center ;
+                    left: 0;
+                    bottom: 0;
+                    i{
+                        color: #fff ;
+                    }
+                }
+            }
+            .already{
+                color: $fontColor ;
+                display: inline-block ;
+                margin: 10px 0 10px 5px  ;
+            }
+            .s-acc{
+                color: $mainColor ;
+            }
+            .socail{
+                span:first-of-type{
+                    color: $fontColor ;
+                    display: inline-block ;
+                    margin-left: 15px ;
+                }
+                .socail-icons{
+                    width: 30px; 
+                    height: 30px ;
+                    border-radius: 50% ;
+                    line-height: 35px ;
+                    display: inline-block ;
+                    margin: 0 5px ;
+                    text-align: center ;
+                    color: #fff ;
+                }
+                .google-icon{
+                    background: RGB(237,28,36) ;
+                }
+                .face-icon{
+                    background: RGB(59,89,152) ;
+                }
+            }
+        }
+    }
+    .define-size{
+        width: 70% !important;
+        margin: 0 auto ;
+    }
+}
+/*** Start Media Queries ***/
+@media only screen and (max-width: 479px){
+    .setting{
+        padding: 10px 0 ;
+        .setting-form{
+            width: 100% ;
+            form{
+                .cont-myimage {
+                    width: 100px ;
+                    height: 100px  ;
+                    .colse-img-now{
+                        left: 20px;
+                        top: 7px ;
+                        font-size: 18px;
+                    }
+                    span{
+                        width: 30px ;
+                        height: 30px;
+                        line-height: 40px ;
+                        left: calc(50% - 20px);
+                        top: calc(50% - 20px);
+                        i{
+                            font-size: 25px ;
+                        }
+                    }
+                }
+                .cover-img{
+                    height: 140px  ;
+                    margin-bottom: 10px ;
+                    .contt-image , .contt-video {
+                        height: 110px  ;
+                        span{
+                            i{
+                                font-size: 20px ;
+                            }
+                        }
+                    }
+                    .cont1{
+                        width: 49.3% ;
+                        height: 55px ;
+                    }
+                    .des-img{
+                        height: 28px;
+                        font-size: 12px ;
+                        line-height: 31px;
+                    }
+                }
+                .dell-all-pro {
+                    font-size: 12px ;
+                }
+                .coll-to-mg{
+                    margin: 4px 0 !important;
+                }
+                label{
+                    font-size: 12px ;
+                    padding-right: 5px ;
+                }
+                textarea , .oo , .cc ,input , button{
+                    padding: 7px 5px !important;
+                    font-size: 13px ;
+                    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                        font-size: 12px ;
+                    }
+                    &::-moz-placeholder { 
+                        font-size: 12px ;
+                    }
+                    &:-ms-input-placeholder { 
+                        font-size: 12px ;
+                    }
+                    &:-moz-placeholder { 
+                        font-size: 12px ;
+                    }
+                    .current{
+                        font-size: 13px ;
+                    }
+                    .list{
+                        li{
+                            font-size: 12px ;
+                        }
+                    }
+                }
+                textarea{
+                    height: 100px;
+                }
+                .change-now{
+                    width: 90px ;
+                    padding: 7px ;
+                    font-size: 13px ;
+                }
+                button{
+                    font-size: 14px !important;
+                }
+                .cont-image {
+                    height: 120px  ;
+                    span{
+                        height: 25px ;
+                        line-height: 30px ;
+                        i{
+                            font-size: 14px ;
+                        }
+                    }
+                }
+                .already{
+                    font-size: 12px ;
+                    margin: 5px 0 5px 0px  ;
+                }
+                .s-acc{
+                    font-size: 12px ;
+                }
+                .socail{
+                    span:first-of-type{
+                        font-size: 12px ;
+                        margin-left: 5px ;
+                    }
+                    .socail-icons{
+                        width: 25px ;
+                        height: 25px;
+                        line-height: 30px ;
+                        margin: 0 2.5px ;
+                        i{
+                            font-size: 15px ;
+                        }
+                    }
+                }
+            }
+        }
+        .define-size{
+            width: 100% !important;
+        }
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px){
+    .setting{
+        padding: 20px 0 ;
+        .setting-form{
+            width: 100% ;
+            form{
+                .cont-myimage {
+                    width: 100px ;
+                    height: 100px  ;
+                    .colse-img-now{
+                        left: 20px;
+                        top: 7px ;
+                        font-size: 18px;
+                    }
+                    span{
+                        width: 30px ;
+                        height: 30px;
+                        line-height: 40px ;
+                        left: calc(50% - 20px);
+                        top: calc(50% - 20px);
+                        i{
+                            font-size: 25px ;
+                        }
+                    }
+                }
+                .cover-img{
+                    height: 160px  ;
+                    .contt-image , .contt-video {
+                        height: 130px  ;
+                        span{
+                            i{
+                                font-size: 30px ;
+                            }
+                        }
+                    }
+                    .cont1{
+                        width: 49.5% ;
+                        height: 65px ;
+                    }
+                    .des-img{
+                        height: 28px;
+                        font-size: 13px ;
+                        line-height: 31px;
+                    }
+                }
+                .dell-all-pro{
+                    font-size: 14px ;
+                }
+                .coll-to-mg{
+                    margin: 4px 0 !important;
+                }
+                label{
+                    font-size: 12px ;
+                    padding-right: 5px ;
+                }
+                textarea , .oo , .cc ,input , button{
+                    padding: 7px 5px !important;
+                    font-size: 13px ;
+                    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                        font-size: 13px ;
+                    }
+                    &::-moz-placeholder { 
+                        font-size: 13px ;
+                    }
+                    &:-ms-input-placeholder { 
+                        font-size: 13px ;
+                    }
+                    &:-moz-placeholder { 
+                        font-size: 13px ;
+                    }
+                    .current{
+                        font-size: 13px ;
+                    }
+                    .list{
+                        li{
+                            font-size: 12px ;
+                        }
+                    }
+                }
+                textarea{
+                    height: 100px;
+                }
+                .change-now{
+                    width: 90px ;
+                    padding: 7px ;
+                    font-size: 13px ;
+                }
+                button{
+                    font-size: 14px !important;
+                }
+                .cont-image {
+                    height: 120px  ;
+                    span{
+                        height: 25px ;
+                        line-height: 30px ;
+                        i{
+                            font-size: 14px ;
+                        }
+                    }
+                }
+                .already{
+                    font-size: 13px ;
+                    margin: 7px 0 7px 5px  ;
+                }
+                .s-acc{
+                    font-size: 13px ;
+                }
+                .socail{
+                    span:first-of-type{
+                        font-size: 13px ;
+                        margin-left: 10px ;
+                    }
+                    .socail-icons{
+                        width: 25px ;
+                        height: 25px;
+                        line-height: 30px ;
+                        margin: 0 2.5px ;
+                        i{
+                            font-size: 15px ;
+                        }
+                    }
+                }
+            }
+        }
+        .define-size{
+            width: 100% !important;
+        }
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .setting{
+        padding: 30px 0 ;
+        .setting-form{
+            width: 90% ;
+            form{
+                .cont-myimage {
+                    width: 120px ;
+                    height: 120px  ;
+                    .colse-img-now{
+                        left: 20px;
+                        font-size: 20px;
+                    }
+                    span{
+                        width: 40px ;
+                        height: 40px;
+                        line-height: 54px ;
+                        left: calc(50% - 20px);
+                        top: calc(50% - 20px);
+                        i{
+                            font-size: 30px ;
+                        }
+                    }
+                }
+                .cover-img{
+                    height: 160px  ;
+                    .contt-image , .contt-video {
+                        height: 130px  ;
+                        span{
+                            i{
+                                font-size: 30px ;
+                            }
+                        }
+                    }
+                    .cont1{
+                        width: 49.3% ;
+                        height: 65px ;
+                    }
+                    .des-img{
+                        height: 28px;
+                        font-size: 14px ;
+                        line-height: 31px;
+                    }
+                }
+                .coll-to-mg{
+                    margin: 10px 0 !important;
+                }
+                label{
+                    font-size: 12px ;
+                    padding-right: 10px ;
+                }
+                textarea , .oo , .cc ,input , button{
+                    padding: 10px 7px !important;
+                    font-size: 14px ;
+                    .current{
+                        font-size: 14px ;
+                    }
+                    .list{
+                        li{
+                            font-size: 13px ;
+                        }
+                    }
+                }
+                textarea{
+                    height: 120px;
+                }
+                .change-now{
+                    width: 90px ;
+                    padding: 8px ;
+                    font-size: 14px ;
+                }
+                button{
+                    font-size: 15px !important;
+                }
+                .cont-image {
+                    height: 140px  ;
+                }
+                .already{
+                    font-size: 14px ;
+                    margin: 10px 0 10px 5px  ;
+                }
+                .s-acc{
+                    font-size: 14px ;
+                }
+                .socail{
+                    span:first-of-type{
+                        font-size: 14px ;
+                        margin-left: 10px ;
+                    }
+                }
+            }
+        }
+        .define-size{
+            width: 90% !important;
+        }
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .setting{
+        padding: 40px 0 ;
+        .setting-form{
+            width: 80% ;
+            margin: 8px auto ;
+            form{
+                .cont-myimage {
+                    width: 140px ;
+                    height: 140px  ;
+                    .colse-img-now{
+                        left: 23px;
+                    }
+                }
+                .coll-to-mg{
+                    margin: 12px 0 !important;
+                }
+                label{
+                    padding-right: 12px ;
+                }
+            }
+        }
+        .define-size{
+            width: 80% !important;
+        }
+    }
+}
+/*** End Media Queries ***/

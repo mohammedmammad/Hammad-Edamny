@@ -1,0 +1,4103 @@
+body {
+  font-family: 'El Messiri', sans-serif;
+  direction: rtl;
+  text-align: right;
+  overflow-x: hidden; }
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 15px; }
+
+a {
+  outline: none;
+  text-decoration: none !important;
+  cursor: pointer !important; }
+
+/*********************************************************************************************************/
+/************************************ Start Variables ************************************/
+/************************************ End Variables ************************************/
+.modal .tit-me {
+  margin-bottom: 0;
+  width: 100%; }
+.modal .close-icon {
+  outline: none;
+  color: RGB(2, 176, 164); }
+  .modal .close-icon span {
+    font-size: 25px;
+    cursor: pointer; }
+.modal .modal-body {
+  text-align: center;
+  font-size: 14px;
+  color: RGB(95, 95, 95);
+  font-family: cairo;
+  padding: 0 20px; }
+.modal .btn-clo {
+  width: 100px;
+  text-align: center;
+  background: RGB(2, 176, 164);
+  color: #fff;
+  margin: 0 auto;
+  outline: none;
+  cursor: pointer; }
+.modal .modal-dialog {
+  max-width: 600px; }
+.modal .modal-content {
+  border: 2px solid RGB(2, 176, 164) !important; }
+.modal .modal-footer, .modal .modal-header {
+  border: none; }
+
+/*********************************************************************************************************/
+.tit-me {
+  margin-bottom: 25px; }
+  .tit-me h4 {
+    color: RGB(64, 64, 64);
+    font-size: 25px;
+    padding-top: 7px;
+    font-weight: 600; }
+
+/************************************ Start Import Pages ************************************/
+.tologin {
+  background: RGB(2, 176, 164);
+  height: 40px;
+  line-height: 40px; }
+  .tologin a {
+    font-size: 14px;
+    color: #fff;
+    display: inline-block;
+    padding: 0 20px; }
+  .tologin .no-border {
+    position: relative;
+    font-size: 17px;
+    border: none !important;
+    padding: 0 10px; }
+    .tologin .no-border .badge-dark {
+      height: 17px;
+      width: 17px;
+      line-height: 17.5px;
+      font-size: 10px;
+      text-align: center;
+      position: absolute;
+      top: 5px;
+      left: 0px;
+      display: inline-block;
+      padding: 0;
+      border-radius: 50%; }
+  .tologin .ml-auto .dropdown {
+    margin-left: 10px;
+    user-select: none;
+    display: inline-block; }
+    .tologin .ml-auto .dropdown hr {
+      width: 90%;
+      margin: 0px auto; }
+    .tologin .ml-auto .dropdown .dropdown-toggle::after {
+      display: none; }
+    .tologin .ml-auto .dropdown .open-dropdown {
+      display: inline-block;
+      cursor: pointer; }
+      .tologin .ml-auto .dropdown .open-dropdown .name-user {
+        color: #fff; }
+      .tologin .ml-auto .dropdown .open-dropdown img {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-left: 7px; }
+    .tologin .ml-auto .dropdown .my-dropdown {
+      padding: 0;
+      left: -35px !important;
+      top: -3px !important;
+      background-color: RGB(255, 255, 255);
+      border-radius: 14px;
+      border: none;
+      width: 180px;
+      line-height: 2.5;
+      box-shadow: 2px 2px 2px RGB(200, 200, 197); }
+      .tologin .ml-auto .dropdown .my-dropdown .top-drop {
+        position: absolute;
+        font-size: 34px;
+        left: calc(50% - 12px);
+        top: -21.3px;
+        color: #fff; }
+      .tologin .ml-auto .dropdown .my-dropdown .dropdown-item {
+        border: none;
+        font-size: 14px;
+        color: RGB(95, 95, 95);
+        text-align: right;
+        transition: all 0.3s ease-in-out; }
+        .tologin .ml-auto .dropdown .my-dropdown .dropdown-item:hover {
+          color: RGB(2, 176, 164); }
+  .tologin .mr-auto a:first-of-type, .tologin .ml-auto a:first-of-type {
+    border-left: 1px solid RGB(195, 195, 195); }
+  .tologin .mr-auto .active, .tologin .ml-auto .active {
+    background: #fff;
+    color: RGB(2, 176, 164); }
+  .tologin .mr-auto .ma-active, .tologin .ml-auto .ma-active {
+    margin-right: -4px; }
+
+.to-slider {
+  background-image: url(../images/bg-min.png);
+  background-size: cover; }
+
+@keyframes fadeIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0; }
+  100% {
+    transform: scale(1);
+    opacity: 1; } }
+#search-icon {
+  color: RGB(2, 176, 164);
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: 0.4s all ease; }
+
+#search-container {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 34vh;
+  transition: 0.1s all;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1); }
+  #search-container #search-close {
+    position: absolute;
+    color: RGB(2, 176, 164);
+    top: 5.7%;
+    right: 3%;
+    font-size: 2.5em;
+    cursor: pointer;
+    transition: 0.4s all ease; }
+    #search-container #search-close:hover {
+      transform: scale(1.1); }
+  #search-container #main-search-form {
+    transition: 0.8s all ease-in-out; }
+  #search-container span {
+    width: 60%;
+    display: block;
+    margin: auto;
+    text-align: right;
+    text-transform: uppercase;
+    padding-top: 0.5em;
+    font-size: 0.95em;
+    color: RGB(2, 176, 164); }
+
+.opacity-on {
+  opacity: 1; }
+
+.opacity-off {
+  opacity: 0; }
+
+.search-input {
+  font-size: 18px;
+  width: 100%;
+  color: #444;
+  padding-bottom: 0.2em;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #444;
+  outline: 0; }
+
+.click-search {
+  background: RGB(2, 176, 164);
+  color: #fff;
+  width: 100%;
+  margin: 20px 0;
+  cursor: pointer;
+  outline: none;
+  box-shadow: none;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  border: 1px solid RGB(2, 176, 164);
+  transition: all 0.3s ease-in-out; }
+  .click-search:hover {
+    color: RGB(2, 176, 164);
+    background: none; }
+
+.show-search {
+  opacity: 0;
+  animation: fadeIn 1s;
+  animation-fill-mode: forwards; }
+
+.heading-container {
+  position: relative;
+  top: 25%;
+  display: block;
+  width: 30%;
+  margin: auto;
+  text-align: center; }
+
+.d-none {
+  display: none; }
+
+.move {
+  transform: perspective(1000px) translate3d(0, 30vh, 0) rotate3d(1, 0, 0, 40deg); }
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.change-background {
+  background: RGB(223, 228, 232); }
+
+.header-slider .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px auto;
+  height: 100%;
+  transition: 0.3s; }
+
+.header-slider .container .logo {
+  position: relative; }
+
+.header-slider .container .logo .logo-img {
+  width: 120px;
+  display: inline-block; }
+  .header-slider .container .logo .logo-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; }
+
+.header-slider .container .mobile_nav {
+  margin: 1px 10px 0;
+  display: none; }
+
+.header-slider .container .mobile_nav .burger {
+  width: 26px;
+  cursor: pointer;
+  height: 19px;
+  position: relative;
+  overflow: hidden; }
+
+.header-slider .container .mobile_nav .burger:active .top,
+.header-slider .container .mobile_nav .burger:focus .top,
+.header-slider .container .mobile_nav .burger:hover .top {
+  width: 60% !important; }
+
+.header-slider .container .mobile_nav .burger:active .middle,
+.header-slider .container .mobile_nav .burger:focus .middle,
+.header-slider .container .mobile_nav .burger:hover .middle {
+  width: 70% !important; }
+
+.header-slider .container .mobile_nav .burger:active .bottom,
+.header-slider .container .mobile_nav .burger:focus .bottom,
+.header-slider .container .mobile_nav .burger:hover .bottom {
+  width: 80% !important; }
+
+.header-slider .container .mobile_nav .burger .mobile_nav__label {
+  margin: -10px 5px;
+  width: 135px;
+  position: absolute; }
+
+.header-slider .container .mobile_nav .burger .stripe {
+  height: 4px;
+  background: RGB(2, 176, 164);
+  position: absolute;
+  transition: 0.2s ease; }
+
+.header-slider .container .mobile_nav .burger .top {
+  right: 0;
+  top: 0;
+  width: 100%; }
+
+.header-slider .container .mobile_nav .burger .middle {
+  left: 0;
+  top: 0;
+  margin: 6.9px 0;
+  width: 60%; }
+
+.header-slider .container .mobile_nav .burger .bottom {
+  right: 0;
+  top: 0;
+  margin: 14px 0;
+  width: 80%; }
+
+.header-slider .container .head_nav {
+  margin: 0 50px;
+  width: 100%; }
+
+.header-slider .container .head_nav ul {
+  text-align: center; }
+
+.header-slider .container .head_nav ul li {
+  display: inline-block;
+  margin: 0 15px; }
+
+.header-slider .container .head_nav ul li a {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  position: relative;
+  color: RGB(95, 95, 95);
+  padding-bottom: 3px; }
+
+.header-slider .container .head_nav ul li .active {
+  border-bottom: 2px dotted RGB(2, 176, 164); }
+
+.header-slider .container .head_nav ul li a:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 4px;
+  background: RGB(2, 176, 164);
+  transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  margin: 15.5px 0;
+  right: 0; }
+
+.header-slider {
+  padding-top: 10px;
+  position: relative; }
+
+.mobile_menu {
+  background: RGB(2, 176, 164);
+  width: 90%;
+  height: 420px;
+  top: 65px;
+  left: 0;
+  margin: 10px 20px;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 999999;
+  display: none; }
+
+.mobile_menu:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 15px 15px 15px;
+  border-color: transparent transparent RGB(2, 176, 164) transparent;
+  margin: -10px 35px; }
+
+.mobile_menu nav {
+  padding: 50px; }
+
+.mobile_menu nav ul .slide a {
+  opacity: 1;
+  position: relative;
+  animation: hidecolor 0.4s ease; }
+
+.mobile_menu nav ul .slide a:before {
+  content: "";
+  position: absolute;
+  background: #3F51B5;
+  width: 0%;
+  height: 35px;
+  animation: slide 0.8s ease; }
+
+.mobile_menu nav ul li {
+  margin: 30px 0px; }
+
+.mobile_menu nav ul li a {
+  opacity: 0;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px 0px;
+  color: white; }
+
+@media only screen and (max-width: 1100px) {
+  .mobile_menu {
+    display: none; } }
+@media only screen and (max-width: 800px) {
+  .mobile_menu {
+    display: none; }
+
+  .header-slider {
+    padding: 0 50px;
+    height: 60px; }
+
+  .header-slider .container {
+    width: 100%; }
+
+  .header-slider .container .icons a {
+    width: 25px;
+    height: 25px; }
+
+  .header-slider .head_nav {
+    display: none; }
+
+  .header-slider .logo {
+    width: 100%;
+    text-align: center; }
+
+  .header-slider .mobile_nav {
+    cursor: pointer;
+    display: block !important; }
+
+  .header-slider .mobile_nav .stripe {
+    width: 100% !important; } }
+@media only screen and (max-width: 500px) {
+  .header-slider {
+    padding: 0 20px; }
+
+  .header-slider .logo span {
+    font-size: 20px !important; }
+
+  .mobile_menu {
+    height: 295px; }
+
+  .mobile_menu:before {
+    margin: -10px 5px; }
+
+  .mobile_menu nav {
+    padding: 30px 50px; }
+
+  .mobile_menu nav ul li {
+    margin: 20px 0px; }
+
+  .mobile_menu nav ul li a {
+    font-size: 18px; }
+
+  .mobile_menu nav ul li a:before {
+    height: 23px !important; } }
+@keyframes slide {
+  0% {
+    width: 0;
+    padding: 0px 10px;
+    margin: 0px -5px; }
+  80% {
+    width: 105%;
+    padding: 0px 10px;
+    margin: 0px -5px; }
+  100% {
+    width: 0;
+    padding: 0 0; } }
+@keyframes hidecolor {
+  0% {
+    color: black; }
+  75% {
+    color: black; }
+  100% {
+    color: white; } }
+/* ============================
+    Large screen nav
+============================= */
+@media screen and (min-width: 800px) {
+  /* Hides mobile-specific elements */
+  .drop-trigger,
+  .nav-revert {
+    display: none; }
+
+  .main-nav {
+    height: auto;
+    position: relative;
+    padding-left: 0%;
+    flex-direction: row;
+    justify-content: flex-end;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0); }
+
+  .nav-item:first-of-type {
+    margin-top: 0; }
+
+  .nav-item {
+    font-size: 18px;
+    margin: 0 5px;
+    color: #dd7d42;
+    width: auto; } }
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  background: RGB(178, 178, 178) no-repeat center center;
+  padding: 20px; }
+
+.icons-arrows {
+  background: rgba(80, 80, 80, 0.5);
+  width: 40px;
+  height: 40px;
+  padding-top: 8px; }
+  .icons-arrows i {
+    font-size: 24px; }
+
+.carousel-control-next, .carousel-control-prev {
+  width: auto !important; }
+
+.slider-text {
+  position: absolute;
+  left: 100px;
+  top: 18%;
+  width: 50%;
+  text-align: center; }
+  .slider-text h2 {
+    font-size: 3rem;
+    font-weight: bold; }
+  .slider-text p {
+    color: RGB(95, 95, 95);
+    font-size: 24px; }
+  .slider-text a {
+    display: block;
+    background: RGB(2, 176, 164);
+    width: 200px;
+    margin: 0 auto;
+    border-radius: 8px;
+    padding: 7px;
+    color: #fff;
+    border: 1px solid RGB(2, 176, 164);
+    transition: all 0.3s ease-in-out; }
+    .slider-text a:hover {
+      color: RGB(2, 176, 164);
+      background: none; }
+
+.d-block {
+  width: 25%;
+  position: relative;
+  right: 100px;
+  top: 0; }
+
+.carousel-indicators li {
+  width: 15px !important;
+  height: 15px !important;
+  cursor: pointer;
+  border: 1px solid rgba(80, 80, 80, 0.5); }
+
+.carousel-indicators .edit-ow {
+  background: none;
+  border: 1px solid RGB(2, 176, 164); }
+
+.carousel-indicators .active {
+  background: RGB(2, 176, 164);
+  border-color: RGB(2, 176, 164); }
+
+/*** Start Media Queries ***/
+@media only screen and (max-width: 479px) {
+  .tologin {
+    height: 35px;
+    line-height: 35px; }
+    .tologin a {
+      font-size: 12px;
+      padding: 0 10px; }
+    .tologin .ml-auto .dropdown .open-dropdown img {
+      width: 30px;
+      height: 30px;
+      margin-left: 2px; }
+    .tologin .ml-auto .dropdown .my-dropdown {
+      left: 0px !important;
+      top: 0px !important;
+      border-radius: 10px;
+      width: 100px;
+      line-height: 2; }
+      .tologin .ml-auto .dropdown .my-dropdown .top-drop {
+        position: absolute;
+        font-size: 34px;
+        left: calc(50% - 12px);
+        top: -21.3px; }
+      .tologin .ml-auto .dropdown .my-dropdown .dropdown-item {
+        font-size: 12px; }
+
+  .d-block {
+    right: 40px;
+    display: none !important; }
+
+  .carousel-inner {
+    height: 100px; }
+
+  .icons-arrows {
+    width: 30px;
+    height: 30px;
+    padding-top: 4px; }
+
+  .slider-text {
+    left: 10%;
+    top: 15%;
+    width: 80%; }
+
+  .slider-text h2 {
+    font-size: 1.5rem; }
+
+  .slider-text p {
+    font-size: 14px; }
+
+  .carousel-indicators {
+    bottom: -10px; }
+
+  .header-slider .container .logo .logo-img {
+    width: 100px; }
+
+  .carousel-indicators li {
+    width: 12px !important;
+    height: 12px !important; } }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .tologin {
+    height: 35px;
+    line-height: 35px; }
+    .tologin a {
+      font-size: 12px;
+      padding: 0 10px; }
+    .tologin .ml-auto .dropdown .open-dropdown img {
+      width: 30px;
+      height: 30px;
+      margin-left: 2px; }
+    .tologin .ml-auto .dropdown .my-dropdown {
+      left: 0px !important;
+      top: 0px !important;
+      border-radius: 10px;
+      width: 100px;
+      line-height: 2; }
+      .tologin .ml-auto .dropdown .my-dropdown .top-drop {
+        position: absolute;
+        font-size: 34px;
+        left: calc(50% - 12px);
+        top: -21.3px; }
+      .tologin .ml-auto .dropdown .my-dropdown .dropdown-item {
+        font-size: 12px; }
+
+  .d-block {
+    right: 40px; }
+
+  .icons-arrows {
+    width: 30px;
+    height: 30px;
+    padding-top: 4px; }
+
+  .slider-text {
+    left: 40px;
+    top: 15%; }
+
+  .slider-text h2 {
+    font-size: 1.5rem; }
+
+  .slider-text p {
+    font-size: 14px; }
+
+  .carousel-indicators {
+    bottom: -10px; }
+
+  .header-slider .container .logo .logo-img {
+    width: 100px; }
+
+  .carousel-indicators li {
+    width: 12px !important;
+    height: 12px !important; } }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .tologin a {
+    font-size: 13px;
+    padding: 0 15px; }
+  .tologin .ml-auto .dropdown .open-dropdown img {
+    margin-left: 4px; }
+  .tologin .ml-auto .dropdown .my-dropdown {
+    left: 0 !important;
+    top: 0 !important; }
+    .tologin .ml-auto .dropdown .my-dropdown .dropdown-item {
+      font-size: 13px; }
+
+  .header-slider .container .logo .logo-img {
+    width: 110px; }
+
+  .header-slider .container .head_nav ul li {
+    font-size: 13px;
+    margin: 0 10px; }
+
+  .header-slider .container .head_nav ul li a {
+    font-size: 13px !important; }
+
+  .d-block {
+    right: 75px; }
+
+  .slider-text {
+    left: 75px;
+    top: 15%; }
+
+  .slider-text h2 {
+    font-size: 2rem; }
+
+  .slider-text p {
+    font-size: 20px; } }
+/*** End Media Queries ***/
+footer {
+  background: url(../images/footer-min.png);
+  background-size: cover;
+  padding-top: 40px; }
+  footer .col-md-4 {
+    color: #fff !important; }
+    footer .col-md-4 .img-logo {
+      width: 130px;
+      display: inline-block;
+      margin-bottom: 10px; }
+      footer .col-md-4 .img-logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; }
+    footer .col-md-4 .text-cont {
+      width: 85%;
+      text-align: justify;
+      font-size: 14px; }
+    footer .col-md-4 h6 span {
+      font-size: 16px;
+      padding-bottom: 5px;
+      border-bottom: 2px solid RGB(2, 176, 164); }
+    footer .col-md-4 ul {
+      margin-top: 28px; }
+      footer .col-md-4 ul li {
+        margin: 7px 0;
+        transition: all 0.3s ease-in-out; }
+        footer .col-md-4 ul li i {
+          color: RGB(2, 176, 164);
+          display: inline-block;
+          padding-left: 4px;
+          font-size: 20px;
+          position: relative;
+          top: 4px; }
+        footer .col-md-4 ul li a {
+          color: #fff;
+          transition: all 0.3s ease-in-out;
+          font-size: 14px; }
+        footer .col-md-4 ul li:hover a {
+          color: RGB(2, 176, 164); }
+    footer .col-md-4 .some-img {
+      margin-top: 30px; }
+      footer .col-md-4 .some-img .col-3 {
+        margin-bottom: 10px;
+        height: 50px;
+        padding: 0 5px; }
+        footer .col-md-4 .some-img .col-3 img {
+          height: 100%;
+          width: 100%; }
+  footer .socail-icons {
+    display: flex;
+    margin: 10px 0;
+    justify-content: center; }
+    footer .socail-icons a {
+      display: block;
+      text-align: center;
+      border: 1px solid #fff;
+      width: 35px;
+      height: 35px;
+      margin: 0 5px;
+      color: #fff;
+      transition: all 0.3s ease-in-out;
+      line-height: 41px; }
+      footer .socail-icons a i {
+        font-size: 20px; }
+      footer .socail-icons a:hover {
+        color: RGB(2, 176, 164);
+        border-color: RGB(2, 176, 164); }
+  footer hr {
+    background: RGB(115, 124, 137);
+    margin-bottom: 0; }
+  footer .latest-footer {
+    padding: 5px; }
+    footer .latest-footer p {
+      font-size: 14px;
+      margin: 0;
+      color: #fff; }
+      footer .latest-footer p a, footer .latest-footer p span {
+        color: RGB(2, 176, 164); }
+
+/*** Start Media Queries ***/
+@media only screen and (max-width: 479px) {
+  footer {
+    padding-top: 10px; }
+    footer .col-md-4 {
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      max-width: 50%; }
+      footer .col-md-4 .img-logo {
+        width: 100px; }
+      footer .col-md-4 .text-cont {
+        width: 100%;
+        font-size: 12px; }
+      footer .col-md-4 h6 span {
+        font-size: 13px;
+        padding-bottom: 4px; }
+      footer .col-md-4 ul {
+        margin-top: 18px; }
+        footer .col-md-4 ul li {
+          margin: 6px 0;
+          font-size: 12px; }
+          footer .col-md-4 ul li i {
+            padding-left: 2px;
+            font-size: 18px;
+            top: 1px; }
+          footer .col-md-4 ul li a {
+            font-size: 13px; }
+          footer .col-md-4 ul li:hover a {
+            color: RGB(2, 176, 164); }
+      footer .col-md-4 .some-img {
+        margin-top: 20px; }
+        footer .col-md-4 .some-img .col-3 {
+          margin-bottom: 5px;
+          height: 40px; }
+          footer .col-md-4 .some-img .col-3 img {
+            height: 100%;
+            width: 100%; }
+    footer .col-md-4:first-of-type {
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+      text-align: center; }
+    footer .socail-icons a {
+      width: 30px;
+      height: 30px;
+      line-height: 36px; }
+      footer .socail-icons a i {
+        font-size: 18px; }
+    footer .latest-footer {
+      padding: 5px; }
+      footer .latest-footer p {
+        font-size: 13px; } }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  footer {
+    padding-top: 20px; }
+    footer .col-md-4 {
+      -ms-flex: 0 0 33.333333%;
+      flex: 0 0 33.333333%;
+      max-width: 33.333333%; }
+      footer .col-md-4 .img-logo {
+        width: 100px; }
+      footer .col-md-4 .text-cont {
+        width: 100%;
+        font-size: 12px; }
+      footer .col-md-4 h6 span {
+        font-size: 13px;
+        padding-bottom: 4px; }
+      footer .col-md-4 ul {
+        margin-top: 18px; }
+        footer .col-md-4 ul li {
+          margin: 6px 0;
+          font-size: 12px; }
+          footer .col-md-4 ul li i {
+            padding-left: 2px;
+            font-size: 18px;
+            top: 1px; }
+          footer .col-md-4 ul li a {
+            font-size: 13px; }
+          footer .col-md-4 ul li:hover a {
+            color: RGB(2, 176, 164); }
+      footer .col-md-4 .some-img {
+        margin-top: 20px; }
+        footer .col-md-4 .some-img .col-3 {
+          margin-bottom: 5px;
+          height: 40px; }
+          footer .col-md-4 .some-img .col-3 img {
+            height: 100%;
+            width: 100%; }
+    footer .socail-icons a {
+      width: 30px;
+      height: 30px;
+      line-height: 36px; }
+      footer .socail-icons a i {
+        font-size: 18px; }
+    footer .latest-footer {
+      padding: 5px; }
+      footer .latest-footer p {
+        font-size: 13px; } }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  footer {
+    padding-top: 20px; }
+    footer .col-md-4 .img-logo {
+      width: 100px; }
+    footer .col-md-4 .text-cont {
+      width: 95%;
+      font-size: 12px; }
+    footer .col-md-4 h6 span {
+      font-size: 14px;
+      padding-bottom: 4px; }
+    footer .col-md-4 ul {
+      margin-top: 18px; }
+      footer .col-md-4 ul li {
+        margin: 6px 0;
+        font-size: 13px; }
+        footer .col-md-4 ul li i {
+          padding-left: 2px;
+          font-size: 18px;
+          top: 1px; }
+        footer .col-md-4 ul li a {
+          font-size: 13px; }
+        footer .col-md-4 ul li:hover a {
+          color: RGB(2, 176, 164); }
+    footer .col-md-4 .some-img {
+      margin-top: 20px; }
+      footer .col-md-4 .some-img .col-3 {
+        margin-bottom: 5px;
+        height: 40px; }
+        footer .col-md-4 .some-img .col-3 img {
+          height: 100%;
+          width: 100%; }
+    footer .socail-icons a {
+      width: 30px;
+      height: 30px;
+      line-height: 36px; }
+      footer .socail-icons a i {
+        font-size: 18px; }
+    footer .latest-footer {
+      padding: 5px; }
+      footer .latest-footer p {
+        font-size: 13px; } }
+@media (min-width: 992px) and (max-width: 1199px) {
+  footer {
+    padding-top: 30px; }
+    footer .col-md-4 .img-logo {
+      width: 110px; }
+    footer .col-md-4 .text-cont {
+      width: 90%;
+      font-size: 13px; }
+    footer .col-md-4 h6 span {
+      font-size: 14px;
+      padding-bottom: 4px; }
+    footer .col-md-4 ul {
+      margin-top: 18px; }
+      footer .col-md-4 ul li {
+        margin: 6px 0;
+        font-size: 13px; }
+        footer .col-md-4 ul li i {
+          padding-left: 2px;
+          font-size: 18px;
+          top: 1px; }
+        footer .col-md-4 ul li a {
+          font-size: 13px; }
+        footer .col-md-4 ul li:hover a {
+          color: RGB(2, 176, 164); }
+    footer .col-md-4 .some-img {
+      margin-top: 20px; }
+      footer .col-md-4 .some-img .col-3 {
+        margin-bottom: 5px;
+        height: 40px; }
+        footer .col-md-4 .some-img .col-3 img {
+          height: 100%;
+          width: 100%; }
+    footer .socail-icons a {
+      width: 30px;
+      height: 30px;
+      line-height: 36px; }
+      footer .socail-icons a i {
+        font-size: 18px; }
+    footer .latest-footer {
+      padding: 5px; }
+      footer .latest-footer p {
+        font-size: 13px; } }
+/*** End Media Queries ***/
+.who-us {
+  position: relative;
+  padding: 50px 0;
+  border-top: 1px solid RGB(224, 229, 233); }
+  .who-us .animate-img {
+    position: absolute;
+    top: 50px;
+    left: -30px;
+    width: 170px; }
+  .who-us .descrap {
+    display: flex; }
+    .who-us .descrap .des-me {
+      width: 320px;
+      border-radius: 15px; }
+      .who-us .descrap .des-me img {
+        border-radius: 15px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+    .who-us .descrap .descraption-text {
+      padding: 20px;
+      width: calc(100% - 340px );
+      color: RGB(95, 95, 95); }
+      .who-us .descrap .descraption-text .title-to-project {
+        font-size: 24px !important;
+        margin-bottom: 12px; }
+        .who-us .descrap .descraption-text .title-to-project .main-pro {
+          font-size: 24px !important;
+          color: RGB(2, 176, 164) !important; }
+        .who-us .descrap .descraption-text .title-to-project .line {
+          display: inline-block;
+          width: 60px;
+          height: 1px;
+          background: RGB(2, 176, 164); }
+        .who-us .descrap .descraption-text .title-to-project .icofont {
+          font-size: 24px;
+          color: RGB(165, 165, 165); }
+      .who-us .descrap .descraption-text .text-all {
+        text-align: justify;
+        font-family: cairo;
+        color: RGB(64, 64, 64); }
+      .who-us .descrap .descraption-text .read-more {
+        display: block;
+        margin-right: auto;
+        width: 150px;
+        border-radius: 14px;
+        padding: 7px;
+        text-align: center;
+        color: RGB(2, 176, 164);
+        border: 1px solid RGB(2, 176, 164);
+        transition: all 0.3s ease-in-out; }
+        .who-us .descrap .descraption-text .read-more:hover {
+          background: RGB(2, 176, 164);
+          color: #fff;
+          border-radius: 2px; }
+
+.goal-us {
+  position: relative;
+  padding: 50px 0;
+  background: RGB(243, 243, 243); }
+  .goal-us .animate-img-rose {
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    width: 170px; }
+  .goal-us .goals .div-row {
+    background: #fff;
+    margin: 10px 0; }
+    .goal-us .goals .div-row .ml-auto {
+      background: RGB(2, 176, 164);
+      width: 50%;
+      color: #fff; }
+      .goal-us .goals .div-row .ml-auto i {
+        display: inline-block;
+        position: relative;
+        top: calc(50% - 33px);
+        font-size: 75px; }
+    .goal-us .goals .div-row .mr-auto {
+      padding: 10px 30px 10px 10px;
+      width: 50%; }
+      .goal-us .goals .div-row .mr-auto h3 {
+        border-bottom: 1px solid RGB(204, 204, 204);
+        padding-bottom: 10px; }
+        .goal-us .goals .div-row .mr-auto h3 span {
+          font-size: 16px;
+          font-weight: bold;
+          border-left: 2px solid RGB(2, 176, 164);
+          padding-left: 10px; }
+      .goal-us .goals .div-row .mr-auto p {
+        text-align: justify;
+        font-size: 14px;
+        color: RGB(95, 95, 95); }
+
+.latest-project {
+  position: relative;
+  padding: 50px 0; }
+  .latest-project .animate-img-rose {
+    position: absolute;
+    top: 20px;
+    left: -20px;
+    width: 170px; }
+  .latest-project .watch-more {
+    width: 200px;
+    display: block;
+    text-align: center;
+    background: RGB(2, 176, 164);
+    color: #fff;
+    border-radius: 20px;
+    margin: 0 auto;
+    display: block;
+    border: none;
+    outline: none;
+    padding: 10px;
+    cursor: pointer; }
+
+.more-support {
+  background: RGB(243, 243, 243); }
+
+/*** Start Media Queries ***/
+@media only screen and (max-width: 479px) {
+  .who-us {
+    padding: 10px 0; }
+    .who-us .animate-img {
+      display: none; }
+    .who-us .descrap {
+      display: block; }
+      .who-us .descrap .des-me {
+        height: 100px;
+        border-radius: 10px;
+        width: 100%; }
+        .who-us .descrap .des-me img {
+          border-radius: 10px; }
+      .who-us .descrap .descraption-text {
+        padding: 8px 0;
+        width: 100%; }
+        .who-us .descrap .descraption-text .title-to-project {
+          font-size: 15px !important;
+          margin-bottom: 4px; }
+          .who-us .descrap .descraption-text .title-to-project .main-pro {
+            font-size: 15px !important; }
+          .who-us .descrap .descraption-text .title-to-project .line {
+            width: 40px; }
+          .who-us .descrap .descraption-text .title-to-project .icofont {
+            font-size: 15px; }
+        .who-us .descrap .descraption-text .text-all {
+          font-size: 12px; }
+        .who-us .descrap .descraption-text .read-more {
+          width: 100px;
+          border-radius: 14px;
+          padding: 6px;
+          font-size: 12px; }
+
+  .goal-us {
+    padding: 10px 0; }
+    .goal-us .animate-img-rose {
+      display: none; }
+    .goal-us .goals .div-row {
+      margin: 4px 0; }
+      .goal-us .goals .div-row .ml-auto {
+        width: 40%; }
+        .goal-us .goals .div-row .ml-auto i {
+          top: calc(50% - 20px);
+          font-size: 40px; }
+      .goal-us .goals .div-row .mr-auto {
+        padding: 5px 10px 5px 5px;
+        width: 60%; }
+        .goal-us .goals .div-row .mr-auto h3 {
+          padding-bottom: 5px; }
+          .goal-us .goals .div-row .mr-auto h3 span {
+            font-size: 14px;
+            padding-left: 5px; }
+        .goal-us .goals .div-row .mr-auto p {
+          font-size: 12px; }
+
+  .latest-project {
+    padding: 10px 0; }
+    .latest-project .animate-img-rose {
+      display: none; }
+    .latest-project .watch-more {
+      width: 100px;
+      font-size: 12px;
+      padding: 7px; } }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .who-us {
+    padding: 20px 0; }
+    .who-us .animate-img {
+      display: none; }
+    .who-us .descrap {
+      display: block; }
+      .who-us .descrap .des-me {
+        height: 150px;
+        border-radius: 10px;
+        width: 100%; }
+        .who-us .descrap .des-me img {
+          border-radius: 10px; }
+      .who-us .descrap .descraption-text {
+        padding: 10px 0;
+        width: 100%; }
+        .who-us .descrap .descraption-text .title-to-project {
+          font-size: 16px !important;
+          margin-bottom: 6px; }
+          .who-us .descrap .descraption-text .title-to-project .main-pro {
+            font-size: 16px !important; }
+          .who-us .descrap .descraption-text .title-to-project .line {
+            width: 40px; }
+          .who-us .descrap .descraption-text .title-to-project .icofont {
+            font-size: 16px; }
+        .who-us .descrap .descraption-text .text-all {
+          font-size: 12px; }
+        .who-us .descrap .descraption-text .read-more {
+          width: 100px;
+          border-radius: 14px;
+          padding: 6px;
+          font-size: 12px; }
+
+  .goal-us {
+    padding: 20px 0; }
+    .goal-us .animate-img-rose {
+      display: none; }
+    .goal-us .goals .div-row {
+      margin: 4px 0; }
+      .goal-us .goals .div-row .ml-auto {
+        width: 40%; }
+        .goal-us .goals .div-row .ml-auto i {
+          top: calc(50% - 20px);
+          font-size: 40px; }
+      .goal-us .goals .div-row .mr-auto {
+        padding: 5px 10px 5px 5px;
+        width: 60%; }
+        .goal-us .goals .div-row .mr-auto h3 {
+          padding-bottom: 5px; }
+          .goal-us .goals .div-row .mr-auto h3 span {
+            font-size: 14px;
+            padding-left: 5px; }
+        .goal-us .goals .div-row .mr-auto p {
+          font-size: 12px; }
+
+  .latest-project {
+    padding: 20px 0; }
+    .latest-project .animate-img-rose {
+      display: none; }
+    .latest-project .watch-more {
+      width: 100px;
+      font-size: 12px;
+      padding: 7px; } }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .who-us {
+    padding: 30px 0; }
+    .who-us .animate-img {
+      left: -20px;
+      width: 120px;
+      top: 20px; }
+    .who-us .descrap .des-me {
+      width: 280px;
+      height: 250px; }
+    .who-us .descrap .descraption-text {
+      padding: 0 10px; }
+      .who-us .descrap .descraption-text .title-to-project {
+        font-size: 20px !important; }
+        .who-us .descrap .descraption-text .title-to-project .main-pro {
+          font-size: 20px !important; }
+        .who-us .descrap .descraption-text .title-to-project .icofont {
+          font-size: 20px; }
+      .who-us .descrap .descraption-text .text-all {
+        font-size: 13px; }
+      .who-us .descrap .descraption-text .read-more {
+        width: 100px;
+        font-size: 13px; }
+
+  .goal-us {
+    padding: 30px 0; }
+    .goal-us .animate-img-rose {
+      top: 10px;
+      width: 120px; }
+    .goal-us .goals .div-row .ml-auto {
+      width: 40%; }
+      .goal-us .goals .div-row .ml-auto i {
+        top: calc(50% - 23px);
+        font-size: 50px; }
+    .goal-us .goals .div-row .mr-auto {
+      padding: 7px 15px 7px 7px;
+      width: 60%; }
+      .goal-us .goals .div-row .mr-auto h3 span {
+        font-size: 14px; }
+      .goal-us .goals .div-row .mr-auto p {
+        font-size: 12px; }
+
+  .latest-project {
+    padding: 30px 0; }
+    .latest-project .animate-img-rose {
+      top: 10px;
+      width: 120px; }
+    .latest-project .watch-more {
+      width: 150px;
+      font-size: 13px; } }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .who-us {
+    padding: 40px 0; }
+    .who-us .animate-img {
+      left: -20px;
+      width: 150px; }
+    .who-us .descrap .des-me {
+      width: 320px; }
+    .who-us .descrap .descraption-text .title-to-project {
+      font-size: 22px !important; }
+      .who-us .descrap .descraption-text .title-to-project .main-pro {
+        font-size: 22px !important; }
+      .who-us .descrap .descraption-text .title-to-project .icofont {
+        font-size: 22px; }
+    .who-us .descrap .descraption-text .text-all {
+      font-size: 14px; }
+    .who-us .descrap .descraption-text .read-more {
+      width: 120px; }
+
+  .goal-us {
+    padding: 40px 0; }
+    .goal-us .animate-img-rose {
+      top: 10px;
+      width: 150px; }
+    .goal-us .goals .div-row .ml-auto i {
+      top: calc(50% - 27px);
+      font-size: 65px; }
+    .goal-us .goals .div-row .mr-auto {
+      padding: 10px 30px 10px 10px;
+      width: 50%; }
+      .goal-us .goals .div-row .mr-auto h3 span {
+        font-size: 15px; }
+      .goal-us .goals .div-row .mr-auto p {
+        font-size: 13px; }
+
+  .latest-project {
+    padding: 40px 0; }
+    .latest-project .animate-img-rose {
+      top: 10px;
+      width: 150px; }
+    .latest-project .watch-more {
+      width: 150px; } }
+/*** End Media Queries ***/
+.details-project {
+  background: url(../images/greybg-min.png);
+  background-size: cover;
+  padding: 50px 0; }
+
+.in-project {
+  display: flex;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 1px 1px 2px RGB(200, 200, 197), -1px -1px 2px RGB(200, 200, 197); }
+  .in-project .sec-video {
+    width: 50%; }
+    .in-project .sec-video .slider-me {
+      height: 100% !important; }
+      .in-project .sec-video .slider-me .carousel {
+        height: 100% !important; }
+        .in-project .sec-video .slider-me .carousel .carousel-inner {
+          height: 100% !important; }
+          .in-project .sec-video .slider-me .carousel .carousel-inner .carousel-item {
+            height: 100%; }
+            .in-project .sec-video .slider-me .carousel .carousel-inner .carousel-item video {
+              height: 100%;
+              object-fit: cover; }
+  .in-project .sec-text {
+    width: 50%; }
+    .in-project .sec-text .cont-all {
+      padding: 0 30px; }
+    .in-project .sec-text .title-project {
+      display: flex;
+      width: 100%;
+      padding: 10px 0;
+      border-bottom: 1px solid RGB(210, 210, 210);
+      margin-bottom: 16px; }
+      .in-project .sec-text .title-project .ml-auto span {
+        font-weight: bold; }
+      .in-project .sec-text .title-project .mr-auto a {
+        display: inline-block;
+        padding: 0 7px; }
+        .in-project .sec-text .title-project .mr-auto a i {
+          color: RGB(2, 176, 164);
+          font-size: 20px; }
+    .in-project .sec-text .text-det-project {
+      font-weight: bold; }
+    .in-project .sec-text .who-to {
+      color: RGB(2, 176, 164); }
+    .in-project .sec-text .son-project {
+      display: flex;
+      margin: 16px 0;
+      color: RGB(95, 95, 95); }
+      .in-project .sec-text .son-project i {
+        color: RGB(2, 176, 164);
+        font-size: 20px; }
+    .in-project .sec-text .supports {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      margin: 20px; }
+      .in-project .sec-text .supports span {
+        color: RGB(95, 95, 95);
+        display: block;
+        font-size: 14px; }
+      .in-project .sec-text .supports .value {
+        margin: 7px 0;
+        background: RGB(2, 176, 164);
+        color: #fff;
+        font-size: 16px;
+        width: 70px;
+        text-align: center;
+        border-radius: 37px;
+        padding: 3px 0; }
+    .in-project .sec-text .some-details {
+      margin: 12px 0;
+      display: flex;
+      justify-content: space-between; }
+      .in-project .sec-text .some-details div {
+        text-align: center; }
+        .in-project .sec-text .some-details div span {
+          display: block;
+          font-weight: bold;
+          font-size: 14px; }
+          .in-project .sec-text .some-details div span i {
+            color: RGB(2, 176, 164);
+            font-size: 20px; }
+        .in-project .sec-text .some-details div .value {
+          color: RGB(95, 95, 95);
+          padding: 7px 0;
+          font-weight: normal;
+          font-size: 15px; }
+    .in-project .sec-text .suspend {
+      display: block;
+      width: 100%;
+      background: RGB(2, 176, 164);
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 17px;
+      border: none;
+      outline: none;
+      cursor: pointer; }
+
+.people-support {
+  margin: 20px 0; }
+  .people-support .edit-title-support {
+    position: relative;
+    top: 30px; }
+  .people-support .supp .owl-next, .people-support .supp .owl-prev {
+    top: -190px !important; }
+  .people-support .title-support {
+    margin-bottom: 10px; }
+    .people-support .title-support img {
+      width: 25px;
+      object-fit: contain; }
+    .people-support .title-support span {
+      display: inline-block;
+      padding-right: 5px;
+      font-size: 18px; }
+
+.cont-comment {
+  background: #fff;
+  padding: 0px 20px;
+  box-shadow: 2px 2px 2px #c8c8c5, -2px -2px 2px #c8c8c5; }
+  .cont-comment .message {
+    padding: 0;
+    margin-bottom: 7px;
+    height: auto;
+    position: relative;
+    display: flex;
+    width: 93%;
+    justify-content: flex-start;
+    border-bottom: 1px solid RGB(216, 216, 216);
+    padding: 20px 0; }
+    .cont-comment .message img {
+      width: 65px;
+      height: 65px;
+      border-radius: 5px; }
+    .cont-comment .message .text-mess {
+      margin-right: 20px;
+      width: calc(100% - 95px) !important; }
+      .cont-comment .message .text-mess .row {
+        padding: 0;
+        margin: 0; }
+        .cont-comment .message .text-mess .row .ml-auto a {
+          color: #222;
+          transition: all 0.3s ease-in-out; }
+          .cont-comment .message .text-mess .row .ml-auto a:hover {
+            color: RGB(2, 176, 164); }
+        .cont-comment .message .text-mess .row .mr-auto .data {
+          font-size: 14px;
+          color: RGB(95, 95, 95);
+          display: inline-block;
+          margin-left: 7.5px;
+          direction: ltr; }
+        .cont-comment .message .text-mess .row .mr-auto .del-now {
+          cursor: pointer;
+          display: inline-block;
+          margin-right: 7.5px;
+          background: red;
+          border-radius: 50%;
+          width: 28px;
+          height: 28px;
+          line-height: 30px;
+          text-align: center;
+          color: #fff; }
+      .cont-comment .message .text-mess .said-text {
+        margin: 8px 0 0;
+        color: RGB(95, 95, 95);
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+  .cont-comment form {
+    width: 93%;
+    padding: 20px 0;
+    display: block; }
+    .cont-comment form textarea {
+      width: 100%;
+      height: 70px;
+      border: none;
+      outline: none; }
+      .cont-comment form textarea::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: RGB(95, 95, 95); }
+      .cont-comment form textarea::-moz-placeholder {
+        /* Firefox 19+ */
+        color: RGB(95, 95, 95); }
+      .cont-comment form textarea:-ms-input-placeholder {
+        /* IE 10+ */
+        color: RGB(95, 95, 95); }
+      .cont-comment form textarea:-moz-placeholder {
+        /* Firefox 18- */
+        color: RGB(95, 95, 95); }
+    .cont-comment form button {
+      display: block;
+      width: 60px;
+      height: 60px;
+      margin-right: auto;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 73px;
+      background: #fff;
+      color: RGB(2, 176, 164);
+      box-shadow: 1px 1px 2px RGB(228, 228, 228), -1px -1px 2px RGB(228, 228, 228);
+      position: relative;
+      top: -38px;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      transition: all 0.3s ease-in-out; }
+      .cont-comment form button:hover {
+        background: RGB(2, 176, 164);
+        color: #fff; }
+      .cont-comment form button i {
+        font-size: 30px; }
+
+/*** Start Media Queries ***/
+@media only screen and (max-width: 479px) {
+  .details-project {
+    padding: 10px 0; } }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .details-project {
+    padding: 20px 0; } }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .details-project {
+    padding: 30px 0; } }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .details-project {
+    padding: 40px 0; } }
+/*** End Media Queries ***/
+.login {
+  padding: 50px 0;
+  background: RGB(251, 249, 249); }
+  .login .login-cont {
+    width: 70%;
+    margin: 0px auto; }
+    .login .login-cont form {
+      width: 100%; }
+      .login .login-cont form textarea, .login .login-cont form .oo, .login .login-cont form .cc, .login .login-cont form input, .login .login-cont form button {
+        height: auto;
+        line-height: normal;
+        text-align: right !important;
+        color: RGB(95, 95, 95) !important;
+        width: 100%;
+        margin: 15px 0 !important;
+        background: #fff !important;
+        border: 1px solid RGB(235, 235, 235) !important;
+        padding: 20px 10px !important;
+        outline: none !important; }
+        .login .login-cont form textarea .list li, .login .login-cont form .oo .list li, .login .login-cont form .cc .list li, .login .login-cont form input .list li, .login .login-cont form button .list li {
+          text-align: right;
+          font-size: 14px; }
+        .login .login-cont form textarea::-webkit-input-placeholder, .login .login-cont form .oo::-webkit-input-placeholder, .login .login-cont form .cc::-webkit-input-placeholder, .login .login-cont form input::-webkit-input-placeholder, .login .login-cont form button::-webkit-input-placeholder {
+          /* Chrome/Opera/Safari */
+          font-size: 14px;
+          color: RGB(95, 95, 95); }
+        .login .login-cont form textarea::-moz-placeholder, .login .login-cont form .oo::-moz-placeholder, .login .login-cont form .cc::-moz-placeholder, .login .login-cont form input::-moz-placeholder, .login .login-cont form button::-moz-placeholder {
+          font-size: 14px;
+          color: RGB(95, 95, 95); }
+        .login .login-cont form textarea:-ms-input-placeholder, .login .login-cont form .oo:-ms-input-placeholder, .login .login-cont form .cc:-ms-input-placeholder, .login .login-cont form input:-ms-input-placeholder, .login .login-cont form button:-ms-input-placeholder {
+          font-size: 14px;
+          color: RGB(95, 95, 95); }
+        .login .login-cont form textarea:-moz-placeholder, .login .login-cont form .oo:-moz-placeholder, .login .login-cont form .cc:-moz-placeholder, .login .login-cont form input:-moz-placeholder, .login .login-cont form button:-moz-placeholder {
+          font-size: 14px;
+          color: RGB(95, 95, 95); }
+      .login .login-cont form .packet {
+        width: 100%;
+        text-align: right;
+        color: RGB(136, 136, 136); }
+        .login .login-cont form .packet .value {
+          display: inline-block;
+          padding-right: 10px; }
+      .login .login-cont form .label-price {
+        font-size: 14px;
+        color: RGB(2, 176, 164);
+        text-align: right;
+        display: inline-block;
+        width: 100%; }
+      .login .login-cont form textarea {
+        height: 150px; }
+      .login .login-cont form #price-ryal, .login .login-cont form #price-dolar {
+        width: 40% !important; }
+      .login .login-cont form .recover {
+        display: inline-block;
+        width: 18.8%;
+        position: relative;
+        top: 3px; }
+        .login .login-cont form .recover img {
+          width: 25%; }
+      .login .login-cont form .choose-location {
+        text-align: right !important;
+        display: inline-block;
+        width: 49.7%; }
+      .login .login-cont form .oo, .login .login-cont form .cc, .login .login-cont form .pass-inp {
+        width: 99% !important;
+        clear: none; }
+      .login .login-cont form .che-remm {
+        text-align: right !important; }
+        .login .login-cont form .che-remm label {
+          position: relative;
+          right: 5px;
+          color: RGB(95, 95, 95);
+          top: -5px; }
+        .login .login-cont form .che-remm .check {
+          padding: 0 !important;
+          display: inline-block !important;
+          margin: 0px !important;
+          position: relative !important;
+          width: 35px !important;
+          height: 20px !important;
+          -webkit-appearance: none; }
+        .login .login-cont form .che-remm .check1 {
+          background: RGB(2, 176, 164) !important;
+          outline: none !important;
+          border-radius: 60px !important;
+          box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2) !important;
+          transition: .5s !important; }
+        .login .login-cont form .che-remm .check1:checked {
+          background: gray !important; }
+        .login .login-cont form .che-remm .check1:before {
+          content: '';
+          position: absolute;
+          width: 15px;
+          height: 15px;
+          border-radius: 60px;
+          top: 1px;
+          left: 0;
+          transform: scale(1.1);
+          box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+          background: #fff;
+          transition: .5s; }
+        .login .login-cont form .che-remm .check1:checked:before {
+          left: 50%; }
+      .login .login-cont form .cont-image {
+        border: 1px solid RGB(225, 225, 225);
+        display: block;
+        background: #fff;
+        width: 100%;
+        position: relative;
+        text-align: center;
+        top: 0;
+        height: 160px; }
+        .login .login-cont form .cont-image .colse-img-now {
+          position: absolute;
+          top: 5px;
+          left: 5px;
+          color: RGB(2, 176, 164);
+          cursor: pointer;
+          display: none;
+          z-index: 5555; }
+        .login .login-cont form .cont-image img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          display: none;
+          z-index: 3; }
+        .login .login-cont form .cont-image input {
+          display: none; }
+        .login .login-cont form .cont-image small {
+          position: relative;
+          top: 35%;
+          color: RGB(114, 114, 112); }
+        .login .login-cont form .cont-image span {
+          position: absolute;
+          display: block;
+          background: RGB(2, 176, 164);
+          width: 100%;
+          z-index: 8;
+          height: 30px;
+          line-height: 35px;
+          cursor: pointer;
+          text-align: center;
+          left: 0;
+          bottom: 0; }
+          .login .login-cont form .cont-image span i {
+            color: #fff; }
+      .login .login-cont form button {
+        background: RGB(2, 176, 164) !important;
+        color: #fff !important;
+        cursor: pointer;
+        border: none;
+        text-align: center !important;
+        font-size: 16px !important; }
+      .login .login-cont form .forget-pass {
+        color: RGB(95, 95, 95);
+        display: block;
+        transition: all 0.3s ease-in-out; }
+        .login .login-cont form .forget-pass:hover {
+          color: RGB(2, 176, 164); }
+      .login .login-cont form .create-acc {
+        display: block;
+        color: RGB(2, 176, 164);
+        margin: 10px 0; }
+      .login .login-cont form .already {
+        color: RGB(95, 95, 95);
+        display: inline-block;
+        margin: 10px 0 30px 5px; }
+      .login .login-cont form .s-acc {
+        color: RGB(2, 176, 164); }
+      .login .login-cont form .socail span:first-of-type {
+        color: RGB(95, 95, 95);
+        display: inline-block;
+        margin-left: 15px; }
+      .login .login-cont form .socail .socail-icons {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        line-height: 35px;
+        display: inline-block;
+        margin: 0 5px;
+        text-align: center;
+        color: #fff; }
+      .login .login-cont form .socail .google-icon {
+        background: RGB(237, 28, 36); }
+      .login .login-cont form .socail .face-icon {
+        background: RGB(59, 89, 152); }
+
+/*** Start Media Queries ***/
+@media only screen and (max-width: 479px) {
+  .login {
+    padding: 20px 0; }
+    .login .login-cont {
+      width: 100%; }
+      .login .login-cont form textarea, .login .login-cont form .oo, .login .login-cont form .cc, .login .login-cont form input, .login .login-cont form button {
+        margin: 4px 0 !important;
+        padding: 7px 5px !important;
+        font-size: 12px; }
+        .login .login-cont form textarea::-webkit-input-placeholder, .login .login-cont form .oo::-webkit-input-placeholder, .login .login-cont form .cc::-webkit-input-placeholder, .login .login-cont form input::-webkit-input-placeholder, .login .login-cont form button::-webkit-input-placeholder {
+          /* Chrome/Opera/Safari */
+          font-size: 12px; }
+        .login .login-cont form textarea::-moz-placeholder, .login .login-cont form .oo::-moz-placeholder, .login .login-cont form .cc::-moz-placeholder, .login .login-cont form input::-moz-placeholder, .login .login-cont form button::-moz-placeholder {
+          font-size: 12px; }
+        .login .login-cont form textarea:-ms-input-placeholder, .login .login-cont form .oo:-ms-input-placeholder, .login .login-cont form .cc:-ms-input-placeholder, .login .login-cont form input:-ms-input-placeholder, .login .login-cont form button:-ms-input-placeholder {
+          font-size: 12px; }
+        .login .login-cont form textarea:-moz-placeholder, .login .login-cont form .oo:-moz-placeholder, .login .login-cont form .cc:-moz-placeholder, .login .login-cont form input:-moz-placeholder, .login .login-cont form button:-moz-placeholder {
+          font-size: 12px; }
+        .login .login-cont form textarea .current, .login .login-cont form .oo .current, .login .login-cont form .cc .current, .login .login-cont form input .current, .login .login-cont form button .current {
+          font-size: 12px; }
+        .login .login-cont form textarea .list li, .login .login-cont form .oo .list li, .login .login-cont form .cc .list li, .login .login-cont form input .list li, .login .login-cont form button .list li {
+          text-align: right;
+          font-size: 11px; }
+      .login .login-cont form textarea {
+        height: 90px; }
+      .login .login-cont form .che-remm {
+        margin-top: 4px; }
+        .login .login-cont form .che-remm label {
+          font-size: 13px; }
+      .login .login-cont form .recover {
+        width: 17%; }
+        .login .login-cont form .recover img {
+          width: 30%; }
+      .login .login-cont form .packet span {
+        font-size: 12px; }
+      .login .login-cont form .packet .value {
+        font-size: 12px;
+        padding-right: 4px; }
+      .login .login-cont form button {
+        font-size: 13px !important; }
+      .login .login-cont form .already {
+        font-size: 12px;
+        margin: 0px 0 10px 5px; }
+      .login .login-cont form .forget-pass, .login .login-cont form .create-acc {
+        font-size: 12px; }
+      .login .login-cont form .create-acc {
+        margin: 3px 0; }
+      .login .login-cont form .socail span {
+        font-size: 12px; }
+      .login .login-cont form .socail .socail-icons {
+        width: 25px;
+        height: 25px;
+        line-height: 30px;
+        margin: 0 2.5px; }
+        .login .login-cont form .socail .socail-icons i {
+          font-size: 15px; } }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .login {
+    padding: 20px 0; }
+    .login .login-cont {
+      width: 100%; }
+      .login .login-cont form textarea, .login .login-cont form .oo, .login .login-cont form .cc, .login .login-cont form input, .login .login-cont form button {
+        margin: 4px 0 !important;
+        padding: 7px 5px !important;
+        font-size: 13px; }
+        .login .login-cont form textarea::-webkit-input-placeholder, .login .login-cont form .oo::-webkit-input-placeholder, .login .login-cont form .cc::-webkit-input-placeholder, .login .login-cont form input::-webkit-input-placeholder, .login .login-cont form button::-webkit-input-placeholder {
+          /* Chrome/Opera/Safari */
+          font-size: 13px; }
+        .login .login-cont form textarea::-moz-placeholder, .login .login-cont form .oo::-moz-placeholder, .login .login-cont form .cc::-moz-placeholder, .login .login-cont form input::-moz-placeholder, .login .login-cont form button::-moz-placeholder {
+          font-size: 13px; }
+        .login .login-cont form textarea:-ms-input-placeholder, .login .login-cont form .oo:-ms-input-placeholder, .login .login-cont form .cc:-ms-input-placeholder, .login .login-cont form input:-ms-input-placeholder, .login .login-cont form button:-ms-input-placeholder {
+          font-size: 13px; }
+        .login .login-cont form textarea:-moz-placeholder, .login .login-cont form .oo:-moz-placeholder, .login .login-cont form .cc:-moz-placeholder, .login .login-cont form input:-moz-placeholder, .login .login-cont form button:-moz-placeholder {
+          font-size: 13px; }
+        .login .login-cont form textarea .current, .login .login-cont form .oo .current, .login .login-cont form .cc .current, .login .login-cont form input .current, .login .login-cont form button .current {
+          font-size: 13px; }
+        .login .login-cont form textarea .list li, .login .login-cont form .oo .list li, .login .login-cont form .cc .list li, .login .login-cont form input .list li, .login .login-cont form button .list li {
+          text-align: right;
+          font-size: 12px; }
+      .login .login-cont form textarea {
+        height: 100px; }
+      .login .login-cont form .che-remm {
+        margin-top: 4px; }
+        .login .login-cont form .che-remm label {
+          font-size: 13px; }
+      .login .login-cont form .recover {
+        width: 18%; }
+        .login .login-cont form .recover img {
+          width: 30%; }
+      .login .login-cont form .packet span {
+        font-size: 13px; }
+      .login .login-cont form .packet .value {
+        font-size: 13px;
+        padding-right: 6px; }
+      .login .login-cont form button {
+        font-size: 14px !important; }
+      .login .login-cont form .already {
+        font-size: 13px;
+        margin: 0px 0 10px 5px; }
+      .login .login-cont form .forget-pass, .login .login-cont form .create-acc {
+        font-size: 13px; }
+      .login .login-cont form .create-acc {
+        margin: 5px 0; }
+      .login .login-cont form .socail span {
+        font-size: 13px; }
+      .login .login-cont form .socail .socail-icons {
+        width: 25px;
+        height: 25px;
+        line-height: 30px;
+        margin: 0 2.5px; }
+        .login .login-cont form .socail .socail-icons i {
+          font-size: 15px; } }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .login {
+    padding: 30px 0; }
+    .login .login-cont {
+      width: 90%; }
+      .login .login-cont form textarea, .login .login-cont form .oo, .login .login-cont form .cc, .login .login-cont form input, .login .login-cont form button {
+        margin: 10px 0 !important;
+        padding: 10px 7px !important;
+        font-size: 14px; }
+        .login .login-cont form textarea .current, .login .login-cont form .oo .current, .login .login-cont form .cc .current, .login .login-cont form input .current, .login .login-cont form button .current {
+          font-size: 14px; }
+        .login .login-cont form textarea .list li, .login .login-cont form .oo .list li, .login .login-cont form .cc .list li, .login .login-cont form input .list li, .login .login-cont form button .list li {
+          text-align: right;
+          font-size: 13px; }
+      .login .login-cont form .packet span {
+        font-size: 14px; }
+      .login .login-cont form .packet .value {
+        font-size: 14px;
+        padding-right: 8px; }
+      .login .login-cont form .che-remm {
+        margin-top: 10px; }
+      .login .login-cont form button {
+        font-size: 15px !important; }
+      .login .login-cont form .already {
+        font-size: 14px;
+        margin: 0px 0 20px 5px; }
+      .login .login-cont form .forget-pass, .login .login-cont form .create-acc {
+        font-size: 14px; }
+      .login .login-cont form .create-acc {
+        margin: 7px 0; }
+      .login .login-cont form .socail span {
+        font-size: 14px; } }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .login {
+    padding: 40px 0; }
+    .login .login-cont {
+      width: 80%; }
+      .login .login-cont form textarea, .login .login-cont form .oo, .login .login-cont form .cc, .login .login-cont form input, .login .login-cont form button {
+        margin: 12px 0 !important;
+        padding: 20px 10px !important; }
+      .login .login-cont form .che-remm {
+        margin-top: 12px; } }
+/*** End Media Queries ***/
+.all-project {
+  padding: 50px 0;
+  background: url(../images/greybg-min.png); }
+  .all-project .filter-project {
+    margin: 25px 0; }
+    .all-project .filter-project .oo {
+      border: 1px solid RGB(2, 176, 164);
+      text-align: right !important;
+      border-radius: 10px;
+      padding: 10px;
+      height: auto !important;
+      line-height: normal !important;
+      color: RGB(95, 95, 95) !important; }
+      .all-project .filter-project .oo .list li {
+        color: RGB(95, 95, 95);
+        font-size: 14px;
+        text-align: right; }
+      .all-project .filter-project .oo:after {
+        border-bottom: 2px solid RGB(2, 176, 164);
+        border-right: 2px solid RGB(2, 176, 164);
+        width: 10px;
+        height: 10px;
+        margin-top: -6px; }
+
+/*** Start Media Queries ***/
+@media only screen and (max-width: 479px) {
+  .all-project {
+    padding: 10px 0; }
+    .all-project .filter-project {
+      margin: 10px 0; }
+      .all-project .filter-project .col-md-4 {
+        margin-bottom: 5px; }
+      .all-project .filter-project .oo {
+        padding: 6px;
+        font-size: 12px; }
+        .all-project .filter-project .oo .current {
+          font-size: 12px; }
+        .all-project .filter-project .oo .list li {
+          font-size: 11px; }
+        .all-project .filter-project .oo:after {
+          width: 8px;
+          height: 8px;
+          margin-top: -6px; }
+    .all-project .real-project .col-md-4 {
+      margin-bottom: 8px; } }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .all-project {
+    padding: 20px 0; }
+    .all-project .filter-project {
+      margin: 15px 0; }
+      .all-project .filter-project .col-md-4 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+        padding-right: 5px;
+        padding-left: 5px; }
+      .all-project .filter-project .col-md-4:first-of-type {
+        padding-right: 0; }
+      .all-project .filter-project .col-md-4:last-of-type {
+        padding-left: 0; }
+      .all-project .filter-project .oo {
+        padding: 6px;
+        font-size: 13px; }
+        .all-project .filter-project .oo .current {
+          font-size: 13px; }
+        .all-project .filter-project .oo .list li {
+          font-size: 12px; }
+        .all-project .filter-project .oo:after {
+          width: 8px;
+          height: 8px;
+          margin-top: -6px; }
+    .all-project .real-project .col-md-4 {
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      max-width: 50%;
+      margin-bottom: 10px; } }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .all-project {
+    padding: 30px 0; }
+    .all-project .filter-project {
+      margin: 20px 0; }
+      .all-project .filter-project .oo {
+        padding: 8px;
+        font-size: 14px; }
+        .all-project .filter-project .oo .current {
+          font-size: 14px; }
+        .all-project .filter-project .oo .list li {
+          font-size: 13px; }
+        .all-project .filter-project .oo:after {
+          width: 8px;
+          height: 8px;
+          margin-top: -6px; }
+    .all-project .real-project .col-md-4 {
+      margin-bottom: 15px; } }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .all-project {
+    padding: 40px 0; } }
+/*** End Media Queries ***/
+.notification {
+  padding: 50px 0;
+  background: RGB(251, 249, 249); }
+  .notification .cont-notification .notif {
+    padding: 15px 0;
+    margin: 15px 0;
+    background: #fff;
+    border: 1px solid RGB(210, 209, 209); }
+    .notification .cont-notification .notif .ml-auto {
+      display: flex; }
+      .notification .cont-notification .notif .ml-auto .icon-not {
+        display: inline-block;
+        padding: 0 20px;
+        border-left: 1px solid RGB(204, 204, 204);
+        margin-left: 20px;
+        line-height: 54px; }
+        .notification .cont-notification .notif .ml-auto .icon-not i {
+          font-size: 20px;
+          color: RGB(95, 95, 95); }
+      .notification .cont-notification .notif .ml-auto .content {
+        display: inline-block; }
+        .notification .cont-notification .notif .ml-auto .content .who-not {
+          display: inline-block;
+          color: RGB(2, 176, 164); }
+          .notification .cont-notification .notif .ml-auto .content .who-not a {
+            color: RGB(2, 176, 164) !important; }
+        .notification .cont-notification .notif .ml-auto .content p {
+          margin: 0;
+          padding-top: 10px;
+          color: RGB(95, 95, 95);
+          width: 737px;
+          overflow: hidden;
+          color: #A4A4A4;
+          font-size: 0.8em;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
+    .notification .cont-notification .notif .mr-auto {
+      padding-left: 20px; }
+      .notification .cont-notification .notif .mr-auto span {
+        display: block;
+        color: RGB(95, 95, 95);
+        direction: ltr;
+        text-align: left; }
+      .notification .cont-notification .notif .mr-auto span:last-of-type {
+        padding-top: 10px; }
+  .notification .cont-notification .un-read .ml-auto .icon-not i {
+    color: RGB(2, 176, 164); }
+
+/*** Start Media Queries ***/
+@media only screen and (max-width: 479px) {
+  .notification {
+    padding: 10px 0; }
+    .notification .cont-notification .notif {
+      padding: 5px 0;
+      margin: 5px 0; }
+      .notification .cont-notification .notif .ml-auto .icon-not {
+        padding: 0 5px;
+        margin-left: 5px;
+        line-height: 48px; }
+        .notification .cont-notification .notif .ml-auto .icon-not i {
+          font-size: 16px;
+          position: relative;
+          top: 5px; }
+      .notification .cont-notification .notif .ml-auto .content .who-not {
+        font-size: 12px; }
+        .notification .cont-notification .notif .ml-auto .content .who-not a {
+          font-size: 12px; }
+      .notification .cont-notification .notif .ml-auto .content p {
+        font-size: 12px;
+        width: 210px !important;
+        padding-top: 5px; }
+      .notification .cont-notification .notif .mr-auto {
+        padding-left: 5px;
+        padding-top: 5px !important; }
+        .notification .cont-notification .notif .mr-auto span {
+          font-size: 11px; }
+        .notification .cont-notification .notif .mr-auto span:last-of-type {
+          padding-top: 5px; } }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .notification {
+    padding: 20px 0; }
+    .notification .cont-notification .notif {
+      padding: 7px 0;
+      margin: 7px 0; }
+      .notification .cont-notification .notif .ml-auto .icon-not {
+        padding: 0 7px;
+        margin-left: 7px;
+        line-height: 48px; }
+        .notification .cont-notification .notif .ml-auto .icon-not i {
+          font-size: 16px;
+          position: relative;
+          top: 5px; }
+      .notification .cont-notification .notif .ml-auto .content .who-not {
+        font-size: 13px; }
+        .notification .cont-notification .notif .ml-auto .content .who-not a {
+          font-size: 13px; }
+      .notification .cont-notification .notif .ml-auto .content p {
+        font-size: 13px;
+        width: 300px;
+        padding-top: 5px; }
+      .notification .cont-notification .notif .mr-auto {
+        padding-left: 7px;
+        padding-top: 7px; }
+        .notification .cont-notification .notif .mr-auto span {
+          font-size: 13px; }
+        .notification .cont-notification .notif .mr-auto span:last-of-type {
+          padding-top: 5px; } }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .notification {
+    padding: 30px 0; }
+    .notification .cont-notification .notif {
+      padding: 10px 0;
+      margin: 10px 0; }
+      .notification .cont-notification .notif .ml-auto .icon-not {
+        padding: 0 10px;
+        margin-left: 10px; }
+        .notification .cont-notification .notif .ml-auto .icon-not i {
+          position: relative;
+          top: 5px; }
+      .notification .cont-notification .notif .ml-auto .content .who-not {
+        font-size: 14px; }
+        .notification .cont-notification .notif .ml-auto .content .who-not a {
+          font-size: 14px; }
+      .notification .cont-notification .notif .ml-auto .content p {
+        font-size: 14px;
+        width: 500px;
+        padding-top: 5px; }
+      .notification .cont-notification .notif .mr-auto {
+        padding-left: 10px; }
+        .notification .cont-notification .notif .mr-auto span {
+          font-size: 14px; }
+        .notification .cont-notification .notif .mr-auto span:last-of-type {
+          padding-top: 5px; } }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .notification {
+    padding: 40px 0; } }
+/*** End Media Queries ***/
+.profile {
+  padding: 50px 0;
+  background: url(../images/greybg-min.png); }
+  .profile .profile-cont .edit-profile {
+    position: relative;
+    background: #fff;
+    box-shadow: 2px 2px 4px RGB(237, 237, 237), -2px -2px 4px RGB(237, 237, 237);
+    border-radius: 10px;
+    padding: 60px 15px 15px; }
+    .profile .profile-cont .edit-profile .div-img {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid RGB(2, 176, 164);
+      right: calc(50% - 50px );
+      top: -50px; }
+      .profile .profile-cont .edit-profile .div-img img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover; }
+    .profile .profile-cont .edit-profile .name-user {
+      display: inline-block;
+      margin: 10px 0;
+      font-size: 16px;
+      font-weight: 700;
+      color: RGB(69, 69, 69); }
+    .profile .profile-cont .edit-profile .prof-mail {
+      display: block;
+      color: RGB(136, 136, 136);
+      font-weight: 300;
+      font-size: 14px; }
+    .profile .profile-cont .edit-profile .link-socail a {
+      display: inline-block;
+      margin: 10px 10px 15px;
+      width: 35px;
+      text-align: center;
+      color: RGB(2, 176, 164);
+      line-height: 43px;
+      height: 35px;
+      border-radius: 50%;
+      box-shadow: 2px 2px 2px RGB(200, 200, 197); }
+      .profile .profile-cont .edit-profile .link-socail a i {
+        font-size: 18px; }
+    .profile .profile-cont .edit-profile .edit-icon {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      display: inline-block;
+      margin: 10px 10px 15px;
+      width: 35px;
+      text-align: center;
+      background: RGB(2, 176, 164);
+      color: #fff;
+      line-height: 35px;
+      height: 35px;
+      border-radius: 50%;
+      box-shadow: 2px 2px 2px RGB(200, 200, 197); }
+    .profile .profile-cont .edit-profile .det-location {
+      margin: 10px 0;
+      text-align: right !important; }
+      .profile .profile-cont .edit-profile .det-location li {
+        color: RGB(95, 95, 95);
+        margin: 10px 0; }
+        .profile .profile-cont .edit-profile .det-location li a {
+          color: RGB(95, 95, 95); }
+        .profile .profile-cont .edit-profile .det-location li i {
+          display: inline-block;
+          margin-left: 5px;
+          color: RGB(2, 176, 164); }
+    .profile .profile-cont .edit-profile hr {
+      width: 80%;
+      margin: 25px auto; }
+    .profile .profile-cont .edit-profile .info-prof {
+      font-size: 14px;
+      color: RGB(95, 95, 95);
+      width: 90%;
+      margin: 10px auto; }
+  .profile .profile-cont .supp-project {
+    background: #fff;
+    box-shadow: 2px 2px 4px RGB(237, 237, 237), -2px -2px 4px RGB(237, 237, 237);
+    border-radius: 10px;
+    padding: 0 20px 10px; }
+    .profile .profile-cont .supp-project .project-tabs {
+      display: flex;
+      padding: 20px 0;
+      border-bottom: 1px solid RGB(191, 191, 191);
+      justify-content: space-around; }
+      .profile .profile-cont .supp-project .project-tabs div {
+        font-size: 17px;
+        color: RGB(69, 69, 69);
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out; }
+        .profile .profile-cont .supp-project .project-tabs div:hover {
+          color: RGB(2, 176, 164); }
+      .profile .profile-cont .supp-project .project-tabs .active {
+        color: RGB(2, 176, 164); }
+    .profile .profile-cont .supp-project .pro-supp {
+      display: none; }
+      .profile .profile-cont .supp-project .pro-supp .pro-num {
+        margin: 15px 0;
+        display: flex;
+        border-bottom: 1px solid RGB(191, 191, 191); }
+        .profile .profile-cont .supp-project .pro-supp .pro-num a {
+          display: inline-block;
+          margin-left: 10px;
+          width: 100px;
+          height: 100px;
+          border-radius: 6px; }
+          .profile .profile-cont .supp-project .pro-supp .pro-num a img {
+            border-radius: 6px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; }
+        .profile .profile-cont .supp-project .pro-supp .pro-num .let-pro h2 {
+          font-size: 17px;
+          font-weight: bold;
+          color: RGB(69, 69, 69);
+          margin-bottom: 8px; }
+        .profile .profile-cont .supp-project .pro-supp .pro-num .let-pro .text-pro {
+          font-size: 14px;
+          color: RGB(95, 95, 95);
+          margin-bottom: 8px; }
+        .profile .profile-cont .supp-project .pro-supp .pro-num .let-pro .money-pro {
+          color: RGB(136, 136, 136); }
+          .profile .profile-cont .supp-project .pro-supp .pro-num .let-pro .money-pro i {
+            display: inline-block;
+            font-size: 20px;
+            padding-left: 3px;
+            color: RGB(2, 176, 164) !important; }
+      .profile .profile-cont .supp-project .pro-supp .pro-num:last-of-type {
+        border: none; }
+
+/*** Start Media Queries ***/
+@media only screen and (max-width: 479px) {
+  .profile {
+    padding: 10px 0; }
+    .profile .profile-cont .col-md-4 {
+      margin-top: 40px;
+      margin-bottom: 10px; }
+    .profile .profile-cont .edit-profile {
+      padding: 40px 10px 10px; }
+      .profile .profile-cont .edit-profile .div-img {
+        width: 80px;
+        height: 80px;
+        border: 2px solid RGB(2, 176, 164);
+        right: calc(50% - 40px );
+        top: -40px; }
+      .profile .profile-cont .edit-profile .name-user {
+        margin: 10px 0 5px;
+        font-size: 15px; }
+      .profile .profile-cont .edit-profile .prof-mail {
+        font-size: 13px; }
+      .profile .profile-cont .edit-profile .link-socail a {
+        margin: 8px 8px 12px;
+        width: 30px;
+        line-height: 35px;
+        height: 30px; }
+        .profile .profile-cont .edit-profile .link-socail a i {
+          font-size: 16px; }
+      .profile .profile-cont .edit-profile .edit-icon {
+        top: 10px;
+        left: 10px;
+        width: 30px;
+        line-height: 33px;
+        height: 30px; }
+      .profile .profile-cont .edit-profile .det-location {
+        margin: 8px 0; }
+        .profile .profile-cont .edit-profile .det-location li {
+          margin: 8px 0;
+          font-size: 14px; }
+          .profile .profile-cont .edit-profile .det-location li a {
+            font-size: 14px; }
+          .profile .profile-cont .edit-profile .det-location li i {
+            margin-left: 3px; }
+      .profile .profile-cont .edit-profile hr {
+        width: 90%;
+        margin: 20px auto; }
+      .profile .profile-cont .edit-profile .info-prof {
+        font-size: 13px;
+        width: 95%;
+        margin: 8px auto; }
+    .profile .profile-cont .supp-project {
+      padding: 0 5px 0px; }
+      .profile .profile-cont .supp-project .project-tabs {
+        padding: 10px 0; }
+        .profile .profile-cont .supp-project .project-tabs div {
+          font-size: 15px; }
+      .profile .profile-cont .supp-project .pro-supp {
+        display: none; }
+        .profile .profile-cont .supp-project .pro-supp .pro-num {
+          margin: 7px 0; }
+          .profile .profile-cont .supp-project .pro-supp .pro-num a {
+            width: 120px;
+            height: 80px;
+            margin-left: 5px; }
+          .profile .profile-cont .supp-project .pro-supp .pro-num .let-pro h2 {
+            font-size: 14px;
+            margin-bottom: 5px; }
+          .profile .profile-cont .supp-project .pro-supp .pro-num .let-pro .text-pro {
+            font-size: 12px;
+            margin-bottom: 5px; }
+          .profile .profile-cont .supp-project .pro-supp .pro-num .let-pro .money-pro {
+            font-size: 12px; }
+            .profile .profile-cont .supp-project .pro-supp .pro-num .let-pro .money-pro i {
+              font-size: 16px;
+              padding-left: 2px; } }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .profile {
+    padding: 20px 0; }
+    .profile .profile-cont .col-md-4 {
+      margin-top: 40px;
+      margin-bottom: 10px; }
+    .profile .profile-cont .edit-profile {
+      padding: 40px 10px 10px; }
+      .profile .profile-cont .edit-profile .div-img {
+        width: 80px;
+        height: 80px;
+        border: 2px solid RGB(2, 176, 164);
+        right: calc(50% - 40px );
+        top: -40px; }
+      .profile .profile-cont .edit-profile .name-user {
+        margin: 10px 0 5px;
+        font-size: 15px; }
+      .profile .profile-cont .edit-profile .prof-mail {
+        font-size: 13px; }
+      .profile .profile-cont .edit-profile .link-socail a {
+        margin: 8px 8px 12px;
+        width: 30px;
+        line-height: 35px;
+        height: 30px; }
+        .profile .profile-cont .edit-profile .link-socail a i {
+          font-size: 16px; }
+      .profile .profile-cont .edit-profile .edit-icon {
+        top: 10px;
+        left: 10px;
+        width: 30px;
+        line-height: 33px;
+        height: 30px; }
+      .profile .profile-cont .edit-profile .det-location {
+        margin: 8px 0; }
+        .profile .profile-cont .edit-profile .det-location li {
+          margin: 8px 0;
+          font-size: 14px; }
+          .profile .profile-cont .edit-profile .det-location li a {
+            font-size: 14px; }
+          .profile .profile-cont .edit-profile .det-location li i {
+            margin-left: 3px; }
+      .profile .profile-cont .edit-profile hr {
+        width: 90%;
+        margin: 20px auto; }
+      .profile .profile-cont .edit-profile .info-prof {
+        font-size: 13px;
+        width: 95%;
+        margin: 8px auto; }
+    .profile .profile-cont .supp-project {
+      padding: 0 15px 5px; }
+      .profile .profile-cont .supp-project .project-tabs {
+        padding: 15px 0; }
+        .profile .profile-cont .supp-project .project-tabs div {
+          font-size: 16px; }
+      .profile .profile-cont .supp-project .pro-supp {
+        display: none; }
+        .profile .profile-cont .supp-project .pro-supp .pro-num {
+          margin: 12px 0; }
+          .profile .profile-cont .supp-project .pro-supp .pro-num a {
+            margin-left: 8px; }
+          .profile .profile-cont .supp-project .pro-supp .pro-num .let-pro h2 {
+            font-size: 16px;
+            margin-bottom: 7px; }
+          .profile .profile-cont .supp-project .pro-supp .pro-num .let-pro .text-pro {
+            font-size: 13px;
+            margin-bottom: 7px; }
+          .profile .profile-cont .supp-project .pro-supp .pro-num .let-pro .money-pro {
+            font-size: 13px; }
+            .profile .profile-cont .supp-project .pro-supp .pro-num .let-pro .money-pro i {
+              font-size: 18px;
+              padding-left: 2px; } }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .profile {
+    padding: 30px 0; }
+    .profile .profile-cont .col-md-4 {
+      padding-left: 0; }
+    .profile .profile-cont .edit-profile {
+      padding: 40px 10px 10px; }
+      .profile .profile-cont .edit-profile .div-img {
+        width: 80px;
+        height: 80px;
+        border: 2px solid RGB(2, 176, 164);
+        right: calc(50% - 40px );
+        top: -40px; }
+      .profile .profile-cont .edit-profile .name-user {
+        margin: 10px 0 5px;
+        font-size: 15px; }
+      .profile .profile-cont .edit-profile .prof-mail {
+        font-size: 13px; }
+      .profile .profile-cont .edit-profile .link-socail a {
+        margin: 8px 8px 12px;
+        width: 30px;
+        line-height: 35px;
+        height: 30px; }
+        .profile .profile-cont .edit-profile .link-socail a i {
+          font-size: 16px; }
+      .profile .profile-cont .edit-profile .edit-icon {
+        top: 10px;
+        left: 10px;
+        width: 30px;
+        line-height: 33px;
+        height: 30px; }
+      .profile .profile-cont .edit-profile .det-location {
+        margin: 8px 0; }
+        .profile .profile-cont .edit-profile .det-location li {
+          margin: 8px 0;
+          font-size: 14px; }
+          .profile .profile-cont .edit-profile .det-location li a {
+            font-size: 14px; }
+          .profile .profile-cont .edit-profile .det-location li i {
+            margin-left: 3px; }
+      .profile .profile-cont .edit-profile hr {
+        width: 90%;
+        margin: 20px auto; }
+      .profile .profile-cont .edit-profile .info-prof {
+        font-size: 13px;
+        width: 95%;
+        margin: 8px auto; }
+    .profile .profile-cont .supp-project {
+      padding: 0 15px 5px; }
+      .profile .profile-cont .supp-project .project-tabs {
+        padding: 15px 0; }
+        .profile .profile-cont .supp-project .project-tabs div {
+          font-size: 16px; }
+      .profile .profile-cont .supp-project .pro-supp {
+        display: none; }
+        .profile .profile-cont .supp-project .pro-supp .pro-num {
+          margin: 12px 0; }
+          .profile .profile-cont .supp-project .pro-supp .pro-num a {
+            margin-left: 8px; }
+          .profile .profile-cont .supp-project .pro-supp .pro-num .let-pro h2 {
+            font-size: 16px;
+            margin-bottom: 7px; }
+          .profile .profile-cont .supp-project .pro-supp .pro-num .let-pro .text-pro {
+            font-size: 13px;
+            margin-bottom: 7px; }
+          .profile .profile-cont .supp-project .pro-supp .pro-num .let-pro .money-pro {
+            font-size: 13px; }
+            .profile .profile-cont .supp-project .pro-supp .pro-num .let-pro .money-pro i {
+              font-size: 18px;
+              padding-left: 2px; } }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .profile {
+    padding: 40px 0; } }
+/*** End Media Queries ***/
+.setting {
+  padding: 50px 0;
+  background: RGB(251, 249, 249); }
+  .setting .setting-form {
+    width: 70%;
+    margin: 10px auto; }
+    .setting .setting-form form .cont-myimage {
+      border: 2px solid RGB(2, 176, 164);
+      display: block;
+      background: #fff;
+      width: 160px;
+      border-radius: 50%;
+      margin: 0 auto;
+      position: relative;
+      text-align: center;
+      top: 0;
+      height: 160px; }
+      .setting .setting-form form .cont-myimage .colse-img-now {
+        position: absolute;
+        top: 11px;
+        left: 32px;
+        color: RGB(2, 176, 164);
+        cursor: pointer;
+        display: block;
+        font-size: 23px;
+        z-index: 5555; }
+      .setting .setting-form form .cont-myimage img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        display: block;
+        z-index: 3; }
+      .setting .setting-form form .cont-myimage input {
+        display: none; }
+      .setting .setting-form form .cont-myimage span {
+        position: absolute;
+        display: block;
+        width: 45px;
+        border-radius: 50%;
+        z-index: 8;
+        height: 45px;
+        line-height: 62px;
+        cursor: pointer;
+        text-align: center;
+        left: calc(50% - 22.5px);
+        top: calc(50% - 22.5px); }
+        .setting .setting-form form .cont-myimage span i {
+          color: RGB(2, 176, 164);
+          font-size: 35px; }
+    .setting .setting-form form .cover-img {
+      width: 100%;
+      background: url(../images/cover.jpg);
+      background-size: cover;
+      height: 200px;
+      position: relative;
+      border: 1px solid RGB(225, 225, 225); }
+      .setting .setting-form form .cover-img .overlay {
+        background-color: rgba(20, 20, 20, 0.5);
+        position: absolute;
+        width: 100%;
+        height: 100%; }
+      .setting .setting-form form .cover-img .contt-image, .setting .setting-form form .cover-img .contt-video {
+        display: block;
+        width: 100%;
+        position: relative;
+        text-align: center;
+        top: 0;
+        height: 150px; }
+        .setting .setting-form form .cover-img .contt-image .colse-img-now, .setting .setting-form form .cover-img .contt-video .colse-img-now {
+          position: absolute;
+          top: 5px;
+          left: 5px;
+          color: RGB(2, 176, 164);
+          cursor: pointer;
+          display: none;
+          z-index: 5555;
+          font-size: 27px;
+          font-weight: bold; }
+        .setting .setting-form form .cover-img .contt-image span, .setting .setting-form form .cover-img .contt-video span {
+          position: absolute;
+          top: calc(50% - 12px);
+          left: calc(50% - 17px);
+          cursor: pointer; }
+          .setting .setting-form form .cover-img .contt-image span i, .setting .setting-form form .cover-img .contt-video span i {
+            font-size: 35px;
+            color: RGB(2, 176, 164); }
+        .setting .setting-form form .cover-img .contt-image img, .setting .setting-form form .cover-img .contt-image video, .setting .setting-form form .cover-img .contt-video img, .setting .setting-form form .cover-img .contt-video video {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: none;
+          z-index: 3; }
+        .setting .setting-form form .cover-img .contt-image video, .setting .setting-form form .cover-img .contt-video video {
+          object-fit: contain; }
+        .setting .setting-form form .cover-img .contt-image input, .setting .setting-form form .cover-img .contt-video input {
+          display: none; }
+      .setting .setting-form form .cover-img .cont1 {
+        width: 49.4%;
+        height: 75px;
+        display: inline-block; }
+      .setting .setting-form form .cover-img .des-img {
+        display: block;
+        background: #fff;
+        width: 100%;
+        z-index: 8;
+        height: 48px;
+        line-height: 48px;
+        cursor: pointer;
+        text-align: center;
+        position: relative;
+        z-index: 555;
+        color: RGB(2, 176, 164);
+        transition: all 0.3s ease-in-out; }
+    .setting .setting-form form .coll-to-mg {
+      margin: 15px 0 !important; }
+    .setting .setting-form form label {
+      font-size: 14px;
+      padding-right: 15px;
+      color: RGB(2, 176, 164); }
+    .setting .setting-form form .city-now {
+      visibility: hidden; }
+    .setting .setting-form form textarea, .setting .setting-form form .oo, .setting .setting-form form .cc, .setting .setting-form form input, .setting .setting-form form button {
+      height: auto;
+      line-height: normal;
+      text-align: right !important;
+      color: RGB(95, 95, 95) !important;
+      width: 100%;
+      background: #fff !important;
+      color: RGB(95, 95, 95);
+      border: 1px solid RGB(235, 235, 235) !important;
+      padding: 15px 10px !important;
+      outline: none !important; }
+      .setting .setting-form form textarea .list li, .setting .setting-form form .oo .list li, .setting .setting-form form .cc .list li, .setting .setting-form form input .list li, .setting .setting-form form button .list li {
+        text-align: right;
+        font-size: 14px; }
+      .setting .setting-form form textarea::-webkit-input-placeholder, .setting .setting-form form .oo::-webkit-input-placeholder, .setting .setting-form form .cc::-webkit-input-placeholder, .setting .setting-form form input::-webkit-input-placeholder, .setting .setting-form form button::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        font-size: 14px;
+        color: RGB(95, 95, 95); }
+      .setting .setting-form form textarea::-moz-placeholder, .setting .setting-form form .oo::-moz-placeholder, .setting .setting-form form .cc::-moz-placeholder, .setting .setting-form form input::-moz-placeholder, .setting .setting-form form button::-moz-placeholder {
+        font-size: 14px;
+        color: RGB(95, 95, 95); }
+      .setting .setting-form form textarea:-ms-input-placeholder, .setting .setting-form form .oo:-ms-input-placeholder, .setting .setting-form form .cc:-ms-input-placeholder, .setting .setting-form form input:-ms-input-placeholder, .setting .setting-form form button:-ms-input-placeholder {
+        font-size: 14px;
+        color: RGB(95, 95, 95); }
+      .setting .setting-form form textarea:-moz-placeholder, .setting .setting-form form .oo:-moz-placeholder, .setting .setting-form form .cc:-moz-placeholder, .setting .setting-form form input:-moz-placeholder, .setting .setting-form form button:-moz-placeholder {
+        font-size: 14px;
+        color: RGB(95, 95, 95); }
+    .setting .setting-form form textarea {
+      resize: none;
+      height: 150px; }
+    .setting .setting-form form .change-now {
+      display: block;
+      width: 100px;
+      text-align: center;
+      padding: 10px;
+      background: RGB(2, 176, 164);
+      color: #fff;
+      position: absolute;
+      left: 15px;
+      bottom: -20px; }
+    .setting .setting-form form button {
+      background: RGB(2, 176, 164) !important;
+      color: #fff !important;
+      cursor: pointer;
+      border: none;
+      text-align: center !important;
+      font-size: 16px !important; }
+    .setting .setting-form form .dell-all-pro {
+      text-align: center;
+      display: block;
+      width: 100%;
+      color: red;
+      margin-top: 10px; }
+    .setting .setting-form form .cont-image {
+      border: 1px solid RGB(225, 225, 225);
+      display: block;
+      background: #fff;
+      width: 100%;
+      position: relative;
+      text-align: center;
+      top: 0;
+      height: 160px; }
+      .setting .setting-form form .cont-image .colse-img-now {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        color: RGB(2, 176, 164);
+        cursor: pointer;
+        display: none;
+        z-index: 5555; }
+      .setting .setting-form form .cont-image img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: none;
+        z-index: 3; }
+      .setting .setting-form form .cont-image input {
+        display: none; }
+      .setting .setting-form form .cont-image small {
+        position: relative;
+        top: 35%;
+        color: RGB(114, 114, 112); }
+      .setting .setting-form form .cont-image span {
+        position: absolute;
+        display: block;
+        background: RGB(2, 176, 164);
+        width: 100%;
+        z-index: 8;
+        height: 30px;
+        line-height: 35px;
+        cursor: pointer;
+        text-align: center;
+        left: 0;
+        bottom: 0; }
+        .setting .setting-form form .cont-image span i {
+          color: #fff; }
+    .setting .setting-form form .already {
+      color: RGB(95, 95, 95);
+      display: inline-block;
+      margin: 10px 0 10px 5px; }
+    .setting .setting-form form .s-acc {
+      color: RGB(2, 176, 164); }
+    .setting .setting-form form .socail span:first-of-type {
+      color: RGB(95, 95, 95);
+      display: inline-block;
+      margin-left: 15px; }
+    .setting .setting-form form .socail .socail-icons {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      line-height: 35px;
+      display: inline-block;
+      margin: 0 5px;
+      text-align: center;
+      color: #fff; }
+    .setting .setting-form form .socail .google-icon {
+      background: RGB(237, 28, 36); }
+    .setting .setting-form form .socail .face-icon {
+      background: RGB(59, 89, 152); }
+  .setting .define-size {
+    width: 70% !important;
+    margin: 0 auto; }
+
+/*** Start Media Queries ***/
+@media only screen and (max-width: 479px) {
+  .setting {
+    padding: 10px 0; }
+    .setting .setting-form {
+      width: 100%; }
+      .setting .setting-form form .cont-myimage {
+        width: 100px;
+        height: 100px; }
+        .setting .setting-form form .cont-myimage .colse-img-now {
+          left: 20px;
+          top: 7px;
+          font-size: 18px; }
+        .setting .setting-form form .cont-myimage span {
+          width: 30px;
+          height: 30px;
+          line-height: 40px;
+          left: calc(50% - 20px);
+          top: calc(50% - 20px); }
+          .setting .setting-form form .cont-myimage span i {
+            font-size: 25px; }
+      .setting .setting-form form .cover-img {
+        height: 140px;
+        margin-bottom: 10px; }
+        .setting .setting-form form .cover-img .contt-image, .setting .setting-form form .cover-img .contt-video {
+          height: 110px; }
+          .setting .setting-form form .cover-img .contt-image span i, .setting .setting-form form .cover-img .contt-video span i {
+            font-size: 20px; }
+        .setting .setting-form form .cover-img .cont1 {
+          width: 49.3%;
+          height: 55px; }
+        .setting .setting-form form .cover-img .des-img {
+          height: 28px;
+          font-size: 12px;
+          line-height: 31px; }
+      .setting .setting-form form .dell-all-pro {
+        font-size: 12px; }
+      .setting .setting-form form .coll-to-mg {
+        margin: 4px 0 !important; }
+      .setting .setting-form form label {
+        font-size: 12px;
+        padding-right: 5px; }
+      .setting .setting-form form textarea, .setting .setting-form form .oo, .setting .setting-form form .cc, .setting .setting-form form input, .setting .setting-form form button {
+        padding: 7px 5px !important;
+        font-size: 13px; }
+        .setting .setting-form form textarea::-webkit-input-placeholder, .setting .setting-form form .oo::-webkit-input-placeholder, .setting .setting-form form .cc::-webkit-input-placeholder, .setting .setting-form form input::-webkit-input-placeholder, .setting .setting-form form button::-webkit-input-placeholder {
+          /* Chrome/Opera/Safari */
+          font-size: 12px; }
+        .setting .setting-form form textarea::-moz-placeholder, .setting .setting-form form .oo::-moz-placeholder, .setting .setting-form form .cc::-moz-placeholder, .setting .setting-form form input::-moz-placeholder, .setting .setting-form form button::-moz-placeholder {
+          font-size: 12px; }
+        .setting .setting-form form textarea:-ms-input-placeholder, .setting .setting-form form .oo:-ms-input-placeholder, .setting .setting-form form .cc:-ms-input-placeholder, .setting .setting-form form input:-ms-input-placeholder, .setting .setting-form form button:-ms-input-placeholder {
+          font-size: 12px; }
+        .setting .setting-form form textarea:-moz-placeholder, .setting .setting-form form .oo:-moz-placeholder, .setting .setting-form form .cc:-moz-placeholder, .setting .setting-form form input:-moz-placeholder, .setting .setting-form form button:-moz-placeholder {
+          font-size: 12px; }
+        .setting .setting-form form textarea .current, .setting .setting-form form .oo .current, .setting .setting-form form .cc .current, .setting .setting-form form input .current, .setting .setting-form form button .current {
+          font-size: 13px; }
+        .setting .setting-form form textarea .list li, .setting .setting-form form .oo .list li, .setting .setting-form form .cc .list li, .setting .setting-form form input .list li, .setting .setting-form form button .list li {
+          font-size: 12px; }
+      .setting .setting-form form textarea {
+        height: 100px; }
+      .setting .setting-form form .change-now {
+        width: 90px;
+        padding: 7px;
+        font-size: 13px; }
+      .setting .setting-form form button {
+        font-size: 14px !important; }
+      .setting .setting-form form .cont-image {
+        height: 120px; }
+        .setting .setting-form form .cont-image span {
+          height: 25px;
+          line-height: 30px; }
+          .setting .setting-form form .cont-image span i {
+            font-size: 14px; }
+      .setting .setting-form form .already {
+        font-size: 12px;
+        margin: 5px 0 5px 0px; }
+      .setting .setting-form form .s-acc {
+        font-size: 12px; }
+      .setting .setting-form form .socail span:first-of-type {
+        font-size: 12px;
+        margin-left: 5px; }
+      .setting .setting-form form .socail .socail-icons {
+        width: 25px;
+        height: 25px;
+        line-height: 30px;
+        margin: 0 2.5px; }
+        .setting .setting-form form .socail .socail-icons i {
+          font-size: 15px; }
+    .setting .define-size {
+      width: 100% !important; } }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .setting {
+    padding: 20px 0; }
+    .setting .setting-form {
+      width: 100%; }
+      .setting .setting-form form .cont-myimage {
+        width: 100px;
+        height: 100px; }
+        .setting .setting-form form .cont-myimage .colse-img-now {
+          left: 20px;
+          top: 7px;
+          font-size: 18px; }
+        .setting .setting-form form .cont-myimage span {
+          width: 30px;
+          height: 30px;
+          line-height: 40px;
+          left: calc(50% - 20px);
+          top: calc(50% - 20px); }
+          .setting .setting-form form .cont-myimage span i {
+            font-size: 25px; }
+      .setting .setting-form form .cover-img {
+        height: 160px; }
+        .setting .setting-form form .cover-img .contt-image, .setting .setting-form form .cover-img .contt-video {
+          height: 130px; }
+          .setting .setting-form form .cover-img .contt-image span i, .setting .setting-form form .cover-img .contt-video span i {
+            font-size: 30px; }
+        .setting .setting-form form .cover-img .cont1 {
+          width: 49.5%;
+          height: 65px; }
+        .setting .setting-form form .cover-img .des-img {
+          height: 28px;
+          font-size: 13px;
+          line-height: 31px; }
+      .setting .setting-form form .dell-all-pro {
+        font-size: 14px; }
+      .setting .setting-form form .coll-to-mg {
+        margin: 4px 0 !important; }
+      .setting .setting-form form label {
+        font-size: 12px;
+        padding-right: 5px; }
+      .setting .setting-form form textarea, .setting .setting-form form .oo, .setting .setting-form form .cc, .setting .setting-form form input, .setting .setting-form form button {
+        padding: 7px 5px !important;
+        font-size: 13px; }
+        .setting .setting-form form textarea::-webkit-input-placeholder, .setting .setting-form form .oo::-webkit-input-placeholder, .setting .setting-form form .cc::-webkit-input-placeholder, .setting .setting-form form input::-webkit-input-placeholder, .setting .setting-form form button::-webkit-input-placeholder {
+          /* Chrome/Opera/Safari */
+          font-size: 13px; }
+        .setting .setting-form form textarea::-moz-placeholder, .setting .setting-form form .oo::-moz-placeholder, .setting .setting-form form .cc::-moz-placeholder, .setting .setting-form form input::-moz-placeholder, .setting .setting-form form button::-moz-placeholder {
+          font-size: 13px; }
+        .setting .setting-form form textarea:-ms-input-placeholder, .setting .setting-form form .oo:-ms-input-placeholder, .setting .setting-form form .cc:-ms-input-placeholder, .setting .setting-form form input:-ms-input-placeholder, .setting .setting-form form button:-ms-input-placeholder {
+          font-size: 13px; }
+        .setting .setting-form form textarea:-moz-placeholder, .setting .setting-form form .oo:-moz-placeholder, .setting .setting-form form .cc:-moz-placeholder, .setting .setting-form form input:-moz-placeholder, .setting .setting-form form button:-moz-placeholder {
+          font-size: 13px; }
+        .setting .setting-form form textarea .current, .setting .setting-form form .oo .current, .setting .setting-form form .cc .current, .setting .setting-form form input .current, .setting .setting-form form button .current {
+          font-size: 13px; }
+        .setting .setting-form form textarea .list li, .setting .setting-form form .oo .list li, .setting .setting-form form .cc .list li, .setting .setting-form form input .list li, .setting .setting-form form button .list li {
+          font-size: 12px; }
+      .setting .setting-form form textarea {
+        height: 100px; }
+      .setting .setting-form form .change-now {
+        width: 90px;
+        padding: 7px;
+        font-size: 13px; }
+      .setting .setting-form form button {
+        font-size: 14px !important; }
+      .setting .setting-form form .cont-image {
+        height: 120px; }
+        .setting .setting-form form .cont-image span {
+          height: 25px;
+          line-height: 30px; }
+          .setting .setting-form form .cont-image span i {
+            font-size: 14px; }
+      .setting .setting-form form .already {
+        font-size: 13px;
+        margin: 7px 0 7px 5px; }
+      .setting .setting-form form .s-acc {
+        font-size: 13px; }
+      .setting .setting-form form .socail span:first-of-type {
+        font-size: 13px;
+        margin-left: 10px; }
+      .setting .setting-form form .socail .socail-icons {
+        width: 25px;
+        height: 25px;
+        line-height: 30px;
+        margin: 0 2.5px; }
+        .setting .setting-form form .socail .socail-icons i {
+          font-size: 15px; }
+    .setting .define-size {
+      width: 100% !important; } }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .setting {
+    padding: 30px 0; }
+    .setting .setting-form {
+      width: 90%; }
+      .setting .setting-form form .cont-myimage {
+        width: 120px;
+        height: 120px; }
+        .setting .setting-form form .cont-myimage .colse-img-now {
+          left: 20px;
+          font-size: 20px; }
+        .setting .setting-form form .cont-myimage span {
+          width: 40px;
+          height: 40px;
+          line-height: 54px;
+          left: calc(50% - 20px);
+          top: calc(50% - 20px); }
+          .setting .setting-form form .cont-myimage span i {
+            font-size: 30px; }
+      .setting .setting-form form .cover-img {
+        height: 160px; }
+        .setting .setting-form form .cover-img .contt-image, .setting .setting-form form .cover-img .contt-video {
+          height: 130px; }
+          .setting .setting-form form .cover-img .contt-image span i, .setting .setting-form form .cover-img .contt-video span i {
+            font-size: 30px; }
+        .setting .setting-form form .cover-img .cont1 {
+          width: 49.3%;
+          height: 65px; }
+        .setting .setting-form form .cover-img .des-img {
+          height: 28px;
+          font-size: 14px;
+          line-height: 31px; }
+      .setting .setting-form form .coll-to-mg {
+        margin: 10px 0 !important; }
+      .setting .setting-form form label {
+        font-size: 12px;
+        padding-right: 10px; }
+      .setting .setting-form form textarea, .setting .setting-form form .oo, .setting .setting-form form .cc, .setting .setting-form form input, .setting .setting-form form button {
+        padding: 10px 7px !important;
+        font-size: 14px; }
+        .setting .setting-form form textarea .current, .setting .setting-form form .oo .current, .setting .setting-form form .cc .current, .setting .setting-form form input .current, .setting .setting-form form button .current {
+          font-size: 14px; }
+        .setting .setting-form form textarea .list li, .setting .setting-form form .oo .list li, .setting .setting-form form .cc .list li, .setting .setting-form form input .list li, .setting .setting-form form button .list li {
+          font-size: 13px; }
+      .setting .setting-form form textarea {
+        height: 120px; }
+      .setting .setting-form form .change-now {
+        width: 90px;
+        padding: 8px;
+        font-size: 14px; }
+      .setting .setting-form form button {
+        font-size: 15px !important; }
+      .setting .setting-form form .cont-image {
+        height: 140px; }
+      .setting .setting-form form .already {
+        font-size: 14px;
+        margin: 10px 0 10px 5px; }
+      .setting .setting-form form .s-acc {
+        font-size: 14px; }
+      .setting .setting-form form .socail span:first-of-type {
+        font-size: 14px;
+        margin-left: 10px; }
+    .setting .define-size {
+      width: 90% !important; } }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .setting {
+    padding: 40px 0; }
+    .setting .setting-form {
+      width: 80%;
+      margin: 8px auto; }
+      .setting .setting-form form .cont-myimage {
+        width: 140px;
+        height: 140px; }
+        .setting .setting-form form .cont-myimage .colse-img-now {
+          left: 23px; }
+      .setting .setting-form form .coll-to-mg {
+        margin: 12px 0 !important; }
+      .setting .setting-form form label {
+        padding-right: 12px; }
+    .setting .define-size {
+      width: 80% !important; } }
+/*** End Media Queries ***/
+/************************************ Start Chat ************************************/
+.messages {
+  padding: 20px 0; }
+  .messages .container-messages .mess-title {
+    margin: 20px 0 0 0;
+    box-shadow: 2px 2px 4px #ccc, -2px -2px 4px #ccc; }
+    .messages .container-messages .mess-title .col-md-4 {
+      background: RGB(2, 176, 164);
+      margin: 0;
+      padding: 15px;
+      color: #fff;
+      border-left: 2px solid #f0f0f0; }
+    .messages .container-messages .mess-title .col-md-8 {
+      background: #fff;
+      border-bottom: 1px solid RGB(2, 176, 164);
+      position: relative; }
+      .messages .container-messages .mess-title .col-md-8 span {
+        width: 150px;
+        text-align: center;
+        background: #fff;
+        color: RGB(189, 189, 189);
+        display: block;
+        position: absolute;
+        top: 73%;
+        left: calc(50% - 75px); }
+  .messages .container-messages .mess-content {
+    background-color: #fff;
+    box-shadow: 2px 2px 4px #ccc, -2px 0px 4px #ccc;
+    margin: 0; }
+    .messages .container-messages .mess-content .col-md-4 {
+      border-left: 2px solid #f0f0f0;
+      background: #fff;
+      max-height: 626px;
+      overflow-y: auto;
+      padding: 0; }
+      .messages .container-messages .mess-content .col-md-4 form {
+        width: 90% !important;
+        margin: 7px auto;
+        border-bottom: 1px solid RGB(236, 236, 236); }
+        .messages .container-messages .mess-content .col-md-4 form input {
+          padding: 0em .5em;
+          border: none !important;
+          box-shadow: none;
+          outline: none !important;
+          height: 100%;
+          color: #444;
+          background-color: #fff;
+          width: calc(100% - 2.5em); }
+        .messages .container-messages .mess-content .col-md-4 form button {
+          background: none;
+          border: none;
+          cursor: pointer;
+          outline: none;
+          width: 2em; }
+          .messages .container-messages .mess-content .col-md-4 form button i {
+            line-height: 1;
+            color: RGB(192, 192, 192); }
+      .messages .container-messages .mess-content .col-md-4::-webkit-scrollbar {
+        width: 10px; }
+      .messages .container-messages .mess-content .col-md-4::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        -o-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        -ms-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px; }
+      .messages .container-messages .mess-content .col-md-4::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+        -o-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+        -ms-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); }
+      .messages .container-messages .mess-content .col-md-4 .online-member {
+        margin: 5px 0;
+        padding: 5px 15px;
+        width: 100%;
+        cursor: pointer;
+        display: flex;
+        transition: all 0.3s ease-in-out;
+        border-bottom: 1px solid #F8F8F8; }
+        .messages .container-messages .mess-content .col-md-4 .online-member:hover {
+          background: #f4f4f4; }
+          .messages .container-messages .mess-content .col-md-4 .online-member:hover .online-user-chat .circle-online {
+            border: 1px solid RGB(2, 176, 164);
+            top: -0.3em; }
+          .messages .container-messages .mess-content .col-md-4 .online-member:hover .con-name .name-mem .ml-auto {
+            color: #5A5A5A; }
+          .messages .container-messages .mess-content .col-md-4 .online-member:hover .con-name .name-mem .mr-auto {
+            color: #A4A4A4; }
+          .messages .container-messages .mess-content .col-md-4 .online-member:hover .con-name .text-mes {
+            color: #A4A4A4; }
+        .messages .container-messages .mess-content .col-md-4 .online-member .div-img {
+          width: 3.5em;
+          height: 3.5em;
+          margin-left: 0.3em;
+          border-radius: 50%;
+          border: 2px solid RGB(2, 176, 164);
+          position: relative; }
+          .messages .container-messages .mess-content .col-md-4 .online-member .div-img img {
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; }
+        .messages .container-messages .mess-content .col-md-4 .online-member .con-name {
+          width: calc( 100% - 3.5em ); }
+          .messages .container-messages .mess-content .col-md-4 .online-member .con-name .name-mem {
+            margin: 0.2em 0;
+            width: 100%; }
+            .messages .container-messages .mess-content .col-md-4 .online-member .con-name .name-mem .ml-auto {
+              font-weight: bold;
+              color: #5A5A5A;
+              font-size: 0.9em; }
+            .messages .container-messages .mess-content .col-md-4 .online-member .con-name .name-mem .mr-auto {
+              direction: ltr;
+              color: #A4A4A4;
+              font-size: 0.8em; }
+          .messages .container-messages .mess-content .col-md-4 .online-member .con-name .text-mes {
+            margin: 0.5em 0;
+            width: 75%;
+            overflow: hidden;
+            color: #A4A4A4;
+            font-size: 0.8em;
+            text-overflow: ellipsis;
+            white-space: nowrap; }
+      .messages .container-messages .mess-content .col-md-4 .selected-member {
+        background: #f4f4f4; }
+        .messages .container-messages .mess-content .col-md-4 .selected-member .online-user-chat .circle-online {
+          border: 1px solid RGB(2, 176, 164);
+          top: -0.3em; }
+        .messages .container-messages .mess-content .col-md-4 .selected-member .con-name .name-mem .ml-auto {
+          color: #5A5A5A; }
+        .messages .container-messages .mess-content .col-md-4 .selected-member .con-name .name-mem .mr-auto {
+          color: #A4A4A4; }
+        .messages .container-messages .mess-content .col-md-4 .selected-member .con-name .text-mes {
+          color: #A4A4A4; }
+    .messages .container-messages .mess-content .col-md-8 {
+      padding: 20px 0 0 0; }
+      .messages .container-messages .mess-content .col-md-8 .messages-member {
+        display: none; }
+        .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages {
+          max-height: 560px;
+          min-height: 560px;
+          padding-right: 15px;
+          padding-left: 15px;
+          overflow-y: auto; }
+          .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages::-webkit-scrollbar {
+            width: 10px; }
+          .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            -o-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            -ms-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            border-radius: 10px; }
+          .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+            -o-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+            -ms-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); }
+          .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member {
+            margin: 5px 0;
+            padding: 5px 15px;
+            width: 80%;
+            cursor: pointer;
+            display: flex; }
+            .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .div-img {
+              width: 3em;
+              height: 3em;
+              margin-left: 0.5em;
+              border-radius: 50%;
+              border: 1px solid RGB(2, 176, 164); }
+              .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .div-img img {
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+                object-fit: cover; }
+              .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .div-img .time-mess {
+                font-size: 12px;
+                color: #A1A1A1;
+                width: 100%; }
+                .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .div-img .time-mess span {
+                  display: block; }
+            .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .con-name {
+              width: calc( 100% - 3.5em ); }
+              .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .con-name .text-mes {
+                margin-top: 1.2em;
+                background-color: #f4f4f4;
+                border-radius: 40px;
+                color: #A4A4A4;
+                padding: 0.5em 1em 0.5em 0.5em;
+                border: 1px solid #f0f0f0;
+                border-top-right-radius: 0;
+                font-size: 0.9em;
+                position: relative; }
+              .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .con-name .uploaded-file {
+                color: RGB(2, 176, 164); }
+          .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .receive {
+            direction: ltr;
+            margin-right: auto; }
+            .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .receive .div-img {
+              margin-left: 0;
+              margin-right: 0.5em; }
+            .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .receive .con-name .text-mes {
+              background: RGB(2, 176, 164);
+              color: #fff;
+              border-top-right-radius: 40px;
+              border-top-left-radius: 0px; }
+      .messages .container-messages .mess-content .col-md-8 .writting-message {
+        border-top: 2px solid #f0f0f0;
+        max-height: 46px;
+        position: relative;
+        margin-bottom: 0 !important; }
+        .messages .container-messages .mess-content .col-md-8 .writting-message .w-text-input {
+          display: inline-block;
+          width: calc(100% - 5em);
+          margin: 0.2em;
+          position: relative; }
+          .messages .container-messages .mess-content .col-md-8 .writting-message .w-text-input input {
+            background-color: #fff;
+            border: none !important;
+            outline: none;
+            width: 100%;
+            font-size: 0.9em;
+            padding: 0.4em;
+            outline: none !important; }
+        .messages .container-messages .mess-content .col-md-8 .writting-message .send-m {
+          position: absolute;
+          height: 100%;
+          width: 4.5em;
+          text-align: center;
+          line-height: 2.5;
+          border-right: 1px solid #D9D9D9;
+          top: 0;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+          left: 0em; }
+          .messages .container-messages .mess-content .col-md-8 .writting-message .send-m i {
+            color: RGB(2, 176, 164); }
+          .messages .container-messages .mess-content .col-md-8 .writting-message .send-m:hover {
+            background-color: RGB(2, 176, 164); }
+            .messages .container-messages .mess-content .col-md-8 .writting-message .send-m:hover i {
+              color: #fff; }
+
+/************************************ End Chat ************************************/
+/*** Start Media Queries ***/
+@media only screen and (max-width: 319px) {
+  /************************************ Start Chat ************************************/
+  .messages {
+    margin: 1em 0; }
+    .messages .container-messages .mess-title .col-md-4 {
+      padding: 0.3em;
+      border-left: none; }
+      .messages .container-messages .mess-title .col-md-4 input {
+        font-size: 0.9em; }
+      .messages .container-messages .mess-title .col-md-4 i {
+        font-size: 1em; }
+    .messages .container-messages .mess-content .col-md-4 {
+      border-bottom: 2px solid #f0f0f0;
+      max-height: 626px;
+      overflow-y: hidden;
+      padding: 0;
+      display: flex; }
+      .messages .container-messages .mess-content .col-md-4 .online-member {
+        margin: 5px 0;
+        padding: 5px;
+        opacity: .5;
+        min-width: 20%;
+        display: block;
+        border-radius: 5px; }
+        .messages .container-messages .mess-content .col-md-4 .online-member .online-user-chat .circle-online {
+          top: 70%;
+          left: 70%;
+          border-color: #fff; }
+        .messages .container-messages .mess-content .col-md-4 .online-member .div-img {
+          display: block !important;
+          width: 2.5em;
+          height: 2.5em;
+          margin-left: 1em;
+          border-radius: 100%;
+          margin: 0 auto; }
+          .messages .container-messages .mess-content .col-md-4 .online-member .div-img img {
+            border-radius: 100%; }
+        .messages .container-messages .mess-content .col-md-4 .online-member .con-name {
+          width: 100%; }
+          .messages .container-messages .mess-content .col-md-4 .online-member .con-name .name-mem {
+            margin: 0.5em 0;
+            width: 100%; }
+            .messages .container-messages .mess-content .col-md-4 .online-member .con-name .name-mem .ml-auto {
+              font-size: 0.5em;
+              font-weight: 500;
+              margin: 0 auto !important;
+              text-align: center; }
+            .messages .container-messages .mess-content .col-md-4 .online-member .con-name .name-mem .mr-auto {
+              display: none; }
+          .messages .container-messages .mess-content .col-md-4 .online-member .con-name .text-mes {
+            display: none; }
+      .messages .container-messages .mess-content .col-md-4 .selected-member, .messages .container-messages .mess-content .col-md-4 .online-member:hover {
+        background: none;
+        opacity: 1; }
+        .messages .container-messages .mess-content .col-md-4 .selected-member .online-user-chat .circle-online, .messages .container-messages .mess-content .col-md-4 .online-member:hover .online-user-chat .circle-online {
+          top: 70%;
+          left: 70%;
+          border-color: #fff; }
+        .messages .container-messages .mess-content .col-md-4 .selected-member .con-name .name-mem .ml-auto, .messages .container-messages .mess-content .col-md-4 .online-member:hover .con-name .name-mem .ml-auto {
+          color: #222; }
+        .messages .container-messages .mess-content .col-md-4 .selected-member .con-name .name-mem .mr-auto, .messages .container-messages .mess-content .col-md-4 .online-member:hover .con-name .name-mem .mr-auto {
+          display: none; }
+    .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages {
+      padding-right: 0px;
+      padding-left: 0px;
+      max-height: 450px;
+      min-height: 450px; }
+      .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member {
+        width: 97%; }
+        .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .div-img {
+          width: 2em;
+          height: 2em;
+          margin-left: 0.3em; }
+        .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .con-name {
+          width: calc( 100% - 2.5em ); }
+          .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .con-name .name-mem {
+            margin: 0; }
+            .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .con-name .name-mem .ml-auto {
+              font-size: 0.7em; }
+            .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .con-name .name-mem .mr-auto {
+              font-size: 0.7em; }
+          .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .con-name .text-mes {
+            margin-top: 0.5em;
+            padding: 0.3em;
+            font-size: 0.65em; }
+    .messages .container-messages .mess-content .col-md-8 .writting-message label span {
+      font-size: 0.5em; }
+    .messages .container-messages .mess-content .col-md-8 .writting-message .w-text-input {
+      font-size: 0.8em;
+      top: -2em !important; }
+    .messages .container-messages .mess-content .col-md-8 .writting-message .send-m {
+      width: 3em;
+      line-height: 2.5; }
+      .messages .container-messages .mess-content .col-md-8 .writting-message .send-m i {
+        font-size: 0.9em; }
+
+  /************************************ End Chat ************************************/ }
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  /************************************ Start Chat ************************************/
+  .messages {
+    margin: 1em 0; }
+    .messages .container-messages .mess-title .col-md-4 {
+      padding: 0.3em;
+      border-left: none;
+      font-size: 13px; }
+      .messages .container-messages .mess-title .col-md-4 input {
+        font-size: 0.9em; }
+      .messages .container-messages .mess-title .col-md-4 i {
+        font-size: 1em; }
+    .messages .container-messages .mess-title .col-md-8 {
+      display: none; }
+    .messages .container-messages .mess-content .col-md-4 {
+      border-bottom: 2px solid #f0f0f0;
+      max-height: 626px;
+      overflow-y: hidden;
+      padding: 0;
+      display: flex; }
+      .messages .container-messages .mess-content .col-md-4 form {
+        display: none; }
+      .messages .container-messages .mess-content .col-md-4 .online-member {
+        margin: 5px 0;
+        padding: 5px;
+        opacity: .5;
+        min-width: 20%;
+        display: block;
+        border-radius: 5px; }
+        .messages .container-messages .mess-content .col-md-4 .online-member .online-user-chat .circle-online {
+          top: 70%;
+          left: 70%;
+          border-color: #fff; }
+        .messages .container-messages .mess-content .col-md-4 .online-member .div-img {
+          display: block !important;
+          width: 2.5em;
+          height: 2.5em;
+          margin-left: 1em;
+          border-radius: 100%;
+          margin: 0 auto; }
+          .messages .container-messages .mess-content .col-md-4 .online-member .div-img img {
+            border-radius: 100%; }
+        .messages .container-messages .mess-content .col-md-4 .online-member .con-name {
+          width: 100%; }
+          .messages .container-messages .mess-content .col-md-4 .online-member .con-name .name-mem {
+            margin: 0.5em 0;
+            width: 100%; }
+            .messages .container-messages .mess-content .col-md-4 .online-member .con-name .name-mem .ml-auto {
+              font-size: 0.5em;
+              font-weight: 500;
+              margin: 0 auto !important;
+              text-align: center; }
+            .messages .container-messages .mess-content .col-md-4 .online-member .con-name .name-mem .mr-auto {
+              display: none; }
+          .messages .container-messages .mess-content .col-md-4 .online-member .con-name .text-mes {
+            display: none; }
+      .messages .container-messages .mess-content .col-md-4 .selected-member, .messages .container-messages .mess-content .col-md-4 .online-member:hover {
+        background: none;
+        opacity: 1; }
+        .messages .container-messages .mess-content .col-md-4 .selected-member .online-user-chat .circle-online, .messages .container-messages .mess-content .col-md-4 .online-member:hover .online-user-chat .circle-online {
+          top: 70%;
+          left: 70%;
+          border-color: #fff; }
+        .messages .container-messages .mess-content .col-md-4 .selected-member .con-name .name-mem .ml-auto, .messages .container-messages .mess-content .col-md-4 .online-member:hover .con-name .name-mem .ml-auto {
+          color: #222; }
+        .messages .container-messages .mess-content .col-md-4 .selected-member .con-name .name-mem .mr-auto, .messages .container-messages .mess-content .col-md-4 .online-member:hover .con-name .name-mem .mr-auto {
+          display: none; }
+    .messages .container-messages .mess-content .col-md-8 {
+      padding: 0; }
+      .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages {
+        padding-right: 0px;
+        padding-left: 0px;
+        max-height: 450px;
+        min-height: 450px; }
+        .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member {
+          width: 93%; }
+          .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .div-img {
+            width: 2em;
+            height: 2em;
+            margin-left: 0.3em; }
+            .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .div-img .time-mess {
+              font-size: 9px; }
+          .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .con-name {
+            width: calc( 100% - 2.5em ); }
+            .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .con-name .name-mem {
+              margin: 0; }
+              .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .con-name .name-mem .ml-auto {
+                font-size: 0.7em; }
+              .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .con-name .name-mem .mr-auto {
+                font-size: 0.7em; }
+            .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .con-name .text-mes {
+              margin-top: 0.5em;
+              padding: 0.25em .7em 0.25em 0.4em;
+              font-size: 0.65em; }
+      .messages .container-messages .mess-content .col-md-8 .writting-message .w-text-input {
+        width: calc(100% - 3.5em); }
+        .messages .container-messages .mess-content .col-md-8 .writting-message .w-text-input input {
+          font-size: 14px; }
+      .messages .container-messages .mess-content .col-md-8 .writting-message .send-m {
+        width: 3em;
+        line-height: 2; }
+        .messages .container-messages .mess-content .col-md-8 .writting-message .send-m i {
+          font-size: 17px; }
+
+  /************************************ End Chat ************************************/ }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  /************************************ Start Chat ************************************/
+  .messages .container-messages .mess-title .col-md-4 {
+    padding: 0.5em;
+    font-size: 14px;
+    border-left: none; }
+    .messages .container-messages .mess-title .col-md-4 input {
+      font-size: 0.9em; }
+    .messages .container-messages .mess-title .col-md-4 i {
+      font-size: 1em; }
+  .messages .container-messages .mess-title .col-md-8 {
+    display: none; }
+  .messages .container-messages .mess-content .col-md-4 {
+    border-bottom: 2px solid #f0f0f0;
+    max-height: 626px;
+    overflow-y: hidden;
+    padding: 0;
+    display: flex; }
+    .messages .container-messages .mess-content .col-md-4 form {
+      display: none; }
+    .messages .container-messages .mess-content .col-md-4 .online-member {
+      opacity: 0.5;
+      margin: 5px 0;
+      padding: 5px 0;
+      min-width: 15%;
+      display: block;
+      border-radius: 5px; }
+      .messages .container-messages .mess-content .col-md-4 .online-member .online-user-chat .circle-online {
+        top: 70%;
+        left: 70%; }
+      .messages .container-messages .mess-content .col-md-4 .online-member .div-img {
+        display: block !important;
+        width: 2.5em;
+        height: 2.5em;
+        margin-left: 1em;
+        border-radius: 100%;
+        margin: 0 auto; }
+        .messages .container-messages .mess-content .col-md-4 .online-member .div-img img {
+          border-radius: 100%; }
+      .messages .container-messages .mess-content .col-md-4 .online-member .con-name {
+        width: 100%; }
+        .messages .container-messages .mess-content .col-md-4 .online-member .con-name .name-mem {
+          margin: 0.5em 0;
+          width: 100%; }
+          .messages .container-messages .mess-content .col-md-4 .online-member .con-name .name-mem .ml-auto {
+            font-size: 0.6em;
+            font-weight: 500;
+            margin: 0 auto !important;
+            text-align: center; }
+          .messages .container-messages .mess-content .col-md-4 .online-member .con-name .name-mem .mr-auto {
+            display: none; }
+        .messages .container-messages .mess-content .col-md-4 .online-member .con-name .text-mes {
+          display: none; }
+    .messages .container-messages .mess-content .col-md-4 .selected-member, .messages .container-messages .mess-content .col-md-4 .online-member:hover {
+      background: none;
+      opacity: 1; }
+      .messages .container-messages .mess-content .col-md-4 .selected-member .online-user-chat .circle-online, .messages .container-messages .mess-content .col-md-4 .online-member:hover .online-user-chat .circle-online {
+        top: 70%;
+        left: 70%;
+        border-color: #fff; }
+      .messages .container-messages .mess-content .col-md-4 .selected-member .con-name .name-mem .ml-auto, .messages .container-messages .mess-content .col-md-4 .online-member:hover .con-name .name-mem .ml-auto {
+        color: #222; }
+      .messages .container-messages .mess-content .col-md-4 .selected-member .con-name .name-mem .mr-auto, .messages .container-messages .mess-content .col-md-4 .online-member:hover .con-name .name-mem .mr-auto {
+        display: none; }
+  .messages .container-messages .mess-content .col-md-8 {
+    padding: 0; }
+    .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages {
+      padding-right: 0px;
+      padding-left: 0px;
+      max-height: 450px;
+      min-height: 450px; }
+      .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member {
+        width: 85%; }
+        .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .div-img {
+          width: 2em;
+          height: 2em;
+          margin-left: 0.5em; }
+          .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .div-img .time-mess {
+            font-size: 11px; }
+        .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .con-name {
+          width: calc( 100% - 2.5em ); }
+          .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .con-name .name-mem {
+            margin: 0; }
+            .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .con-name .name-mem .ml-auto {
+              font-size: 0.8em; }
+            .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .con-name .name-mem .mr-auto {
+              font-size: 0.8em; }
+          .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .con-name .text-mes {
+            margin-top: 0.5em;
+            font-size: 0.75em;
+            padding: 0.3em 1em 0.3em 0.5em; }
+    .messages .container-messages .mess-content .col-md-8 .writting-message .w-text-input {
+      width: calc(100% - 4em); }
+      .messages .container-messages .mess-content .col-md-8 .writting-message .w-text-input input {
+        font-size: 14px; }
+    .messages .container-messages .mess-content .col-md-8 .writting-message .send-m {
+      width: 3.5em;
+      line-height: 2.5; }
+      .messages .container-messages .mess-content .col-md-8 .writting-message .send-m i {
+        font-size: 17px; }
+
+  /************************************ End Chat ************************************/ }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  /************************************ Start Chat ************************************/
+  .messages {
+    margin: 1.5em 0; }
+    .messages .container-messages .mess-title .col-md-4 {
+      font-size: 15px;
+      padding: 11px; }
+    .messages .container-messages .mess-title .col-md-8 span {
+      font-size: 15px; }
+    .messages .container-messages .mess-content .col-md-4 form {
+      width: 95%;
+      font-size: 14px; }
+      .messages .container-messages .mess-content .col-md-4 form input {
+        font-size: 14px !important; }
+    .messages .container-messages .mess-content .col-md-4 .online-member {
+      padding: 5px 10px; }
+      .messages .container-messages .mess-content .col-md-4 .online-member .div-img {
+        width: 3em;
+        height: 3em;
+        margin-left: 0.5em; }
+      .messages .container-messages .mess-content .col-md-4 .online-member .con-name {
+        width: calc( 100% - 3.5em ); }
+        .messages .container-messages .mess-content .col-md-4 .online-member .con-name .name-mem .ml-auto {
+          font-size: 0.7em; }
+        .messages .container-messages .mess-content .col-md-4 .online-member .con-name .name-mem .mr-auto {
+          font-size: 0.6em; }
+        .messages .container-messages .mess-content .col-md-4 .online-member .con-name .text-mes {
+          font-size: 0.7em; }
+    .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages {
+      padding-right: 0px;
+      padding-left: 0px; }
+      .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member {
+        width: 85%; }
+        .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .div-img {
+          width: 2em;
+          height: 2em;
+          margin-left: 0.5em; }
+          .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .div-img .time-mess {
+            font-size: 11px; }
+        .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .con-name {
+          width: calc( 100% - 2.5em ); }
+          .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .con-name .name-mem {
+            margin: 0; }
+            .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .con-name .name-mem .ml-auto {
+              font-size: 0.8em; }
+            .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .con-name .name-mem .mr-auto {
+              font-size: 0.8em; }
+          .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .con-name .text-mes {
+            margin-top: 0.5em;
+            padding: 0.3em 1em 0.3em 0.5em;
+            font-size: 0.75em; }
+    .messages .container-messages .mess-content .col-md-8 .writting-message .w-text-input {
+      width: calc(100% - 4em); }
+      .messages .container-messages .mess-content .col-md-8 .writting-message .w-text-input input {
+        font-size: 14px; }
+    .messages .container-messages .mess-content .col-md-8 .writting-message .send-m {
+      width: 3.5em;
+      line-height: 2.5; }
+      .messages .container-messages .mess-content .col-md-8 .writting-message .send-m i {
+        font-size: 17px; }
+
+  /************************************ End Chat ****************************************/ }
+@media (min-width: 992px) and (max-width: 1199px) {
+  /************************************ Start Chat ************************************/
+  .messages .container-messages .mess-content .col-md-4 .online-member .div-img {
+    margin-left: 0.2em; }
+  .messages .container-messages .mess-content .col-md-4 .online-member .con-name .name-mem .ml-auto {
+    font-size: 0.9em; }
+  .messages .container-messages .mess-content .col-md-4 .online-member .con-name .name-mem .mr-auto {
+    font-size: 0.9em; }
+  .messages .container-messages .mess-content .col-md-4 .online-member .con-name .text-mes {
+    font-size: 0.85em; }
+  .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .con-name .name-mem .ml-auto {
+    font-size: 0.9em; }
+  .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .con-name .name-mem .mr-auto {
+    font-size: 0.9em; }
+  .messages .container-messages .mess-content .col-md-8 .messages-member .all-messages .message-member .con-name .text-mes {
+    font-size: 0.85em; }
+
+  /************************************ End Chat ************************************/ }
+/*** End Media Queries ***/
+/************************************ End Import Pages ************************************/
+.pick-arw-l::before {
+  content: "\f053" !important;
+  font-family: FontAwesome !important; }
+
+.pick-arw-r::before {
+  content: "\f054" !important;
+  font-family: FontAwesome !important; }
+
+div.datedropper .picker .pick-btns .pick-submit:after {
+  content: "\f00c" !important;
+  font-family: FontAwesome !important; }
+
+div.datedropper.primary .pick-lg-b .pick-sl:before, div.datedropper.primary .pick-lg-h, div.datedropper.primary .pick-m, div.datedropper.primary .pick-submit, div.datedropper.primary:before {
+  background-color: RGB(2, 176, 164); }
+
+div.datedropper.primary .pick li span, div.datedropper.primary .pick-btn, div.datedropper.primary .pick-lg-b .pick-wke, div.datedropper.primary .pick-y.pick-jump {
+  color: RGB(2, 176, 164); }
+
+/*********************************************************************************************************/
+.progress {
+  height: 10px;
+  overflow: visible;
+  background: #fff;
+  border: 1px solid RGB(213, 213, 213); }
+  .progress .progress-bar {
+    background: RGB(2, 176, 164);
+    width: 0;
+    justify-content: flex-end; }
+    .progress .progress-bar span {
+      width: 30px;
+      font-size: 10px;
+      padding-top: 7px;
+      height: 30px;
+      border-radius: 50%;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      background: RGB(2, 176, 164);
+      display: inline-block; }
+
+.pagination {
+  justify-content: center; }
+  .pagination .page-link {
+    margin: 0 2px;
+    color: RGB(95, 95, 95);
+    background-color: #fff;
+    border: 1px solid RGB(2, 176, 164);
+    transition: all 0.3s ease-in-out; }
+    .pagination .page-link:hover {
+      background: RGB(2, 176, 164);
+      color: #fff; }
+
+#demos {
+  margin: 30px 0; }
+  #demos .columns {
+    width: 100%;
+    position: relative;
+    padding-left: .9375rem;
+    padding-right: .9375rem;
+    float: left; }
+    #demos .columns .owl-carousel .owl-nav {
+      height: 0;
+      margin: 0; }
+    #demos .columns .owl-carousel button.owl-next, #demos .columns .owl-carousel button.owl-prev {
+      position: relative;
+      top: -310px;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      background: RGB(2, 176, 164);
+      outline: none;
+      line-height: 1;
+      color: #fff; }
+      #demos .columns .owl-carousel button.owl-next span, #demos .columns .owl-carousel button.owl-prev span {
+        font-size: 28px; }
+    #demos .columns .owl-carousel button.owl-next {
+      left: -50%; }
+    #demos .columns .owl-carousel button.owl-prev {
+      left: 50%; }
+
+.project {
+  margin: 15px auto;
+  width: 90%;
+  border-radius: 7px;
+  overflow: hidden;
+  background: RGB(251, 251, 251);
+  box-shadow: 2px 2px 4px RGB(237, 237, 237), -2px -2px 4px RGB(237, 237, 237); }
+  .project img {
+    width: 100%;
+    height: 185px;
+    object-fit: cover; }
+  .project .support-det {
+    text-align: center;
+    background: #fff; }
+    .project .support-det .link-user {
+      color: #222;
+      padding: 10px 0;
+      display: inline-block;
+      transition: all 0.3s ease-in-out; }
+      .project .support-det .link-user:hover {
+        color: RGB(2, 176, 164); }
+    .project .support-det .socail-icons a {
+      display: inline-block;
+      margin: 10px 10px 15px;
+      width: 35px;
+      text-align: center;
+      line-height: 35px;
+      height: 35px;
+      border-radius: 50%;
+      box-shadow: 2px 2px 2px RGB(200, 200, 197); }
+      .project .support-det .socail-icons a i {
+        color: RGB(2, 176, 164); }
+  .project .lat-icons {
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    padding: 7px 0;
+    border-bottom: 1px solid RGB(204, 204, 204);
+    margin-bottom: 16px;
+    margin-right: 2.5%; }
+    .project .lat-icons div {
+      text-align: center;
+      padding: 7px;
+      width: 33.333%;
+      color: RGB(204, 204, 204);
+      border-left: 1px solid RGB(204, 204, 204); }
+      .project .lat-icons div span {
+        display: inline-block;
+        padding: 0 5px; }
+    .project .lat-icons div:last-of-type {
+      border: none; }
+  .project .details-project {
+    background: RGB(251, 251, 251);
+    padding: 10px; }
+    .project .details-project h6 {
+      font-weight: bold; }
+    .project .details-project .who-project {
+      font-size: 14px;
+      color: RGB(2, 176, 164); }
+    .project .details-project .text-project {
+      font-size: 14px;
+      color: RGB(95, 95, 95);
+      height: 45px;
+      overflow: hidden;
+      margin-bottom: 0; }
+    .project .details-project a {
+      display: inline-block;
+      position: relative;
+      color: RGB(2, 176, 164);
+      font-size: 13px;
+      right: 87%;
+      top: -8px; }
+    .project .details-project .packet-project, .project .details-project .location-project {
+      font-size: 14px;
+      color: RGB(95, 95, 95);
+      margin-bottom: 8px; }
+      .project .details-project .packet-project i, .project .details-project .location-project i {
+        display: inline-block;
+        padding-left: 5px;
+        color: RGB(2, 176, 164); }
+    .project .details-project .final-project {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 7px;
+      padding: 7px 0; }
+      .project .details-project .final-project div {
+        text-align: center;
+        width: 33.333%; }
+        .project .details-project .final-project div span {
+          display: inline-block;
+          padding: 0 5px;
+          font-size: 13px; }
+        .project .details-project .final-project div .value {
+          color: RGB(95, 95, 95);
+          display: block; }
+
+/************************************ Start intel tel input ************************************/
+.iti-flag {
+  background-image: url(../images/flags.png) !important; }
+
+.intl-tel-input.allow-dropdown .selected-flag, .intl-tel-input.separate-dial-code .selected-flag {
+  width: 35px; }
+
+.intl-tel-input .selected-flag .iti-flag {
+  left: 1px; }
+
+.intl-tel-input .selected-flag .iti-arrow {
+  right: 3px; }
+
+.intl-tel-input {
+  width: 100%; }
+
+.intl-tel-input.allow-dropdown .flag-container:hover .selected-flag {
+  background: #fff; }
+
+.intl-tel-input .country-list {
+  text-align: right;
+  color: #222; }
+
+/************************************ End intel tel input ************************************/
+/*** Start Media Queries ***/
+@media only screen and (max-width: 479px) {
+  #demos {
+    margin: 10px 0; }
+    #demos .columns {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem; }
+      #demos .columns .owl-carousel button.owl-next, #demos .columns .owl-carousel button.owl-prev {
+        top: -215px;
+        width: 30px;
+        height: 30px; }
+
+  .project {
+    margin: 0px auto;
+    width: 100%; }
+    .project img {
+      height: 120px; }
+    .project .support-det .link-user {
+      color: #222;
+      padding: 10px 0;
+      display: inline-block;
+      transition: all 0.3s ease-in-out; }
+      .project .support-det .link-user:hover {
+        color: RGB(2, 176, 164); }
+    .project .support-det .socail-icons a {
+      display: inline-block;
+      margin: 10px 10px 15px;
+      width: 35px;
+      text-align: center;
+      line-height: 35px;
+      height: 35px;
+      border-radius: 50%;
+      box-shadow: 2px 2px 2px RGB(200, 200, 197); }
+      .project .support-det .socail-icons a i {
+        color: RGB(2, 176, 164); }
+    .project .lat-icons {
+      padding: 4px 0;
+      margin-bottom: 8px; }
+      .project .lat-icons div {
+        padding: 4px; }
+        .project .lat-icons div span {
+          padding: 0 1px;
+          font-size: 12px; }
+    .project .details-project h6 {
+      font-size: 14px; }
+    .project .details-project .who-project {
+      font-size: 12px; }
+      .project .details-project .who-project span {
+        font-size: 12px; }
+    .project .details-project .text-project {
+      font-size: 12px;
+      height: 38px; }
+    .project .details-project .packet-project, .project .details-project .location-project {
+      font-size: 12px;
+      margin-bottom: 4px; }
+      .project .details-project .packet-project span, .project .details-project .location-project span {
+        font-size: 12px; }
+      .project .details-project .packet-project i, .project .details-project .location-project i {
+        padding-left: 2px; }
+    .project .details-project .location-project {
+      margin-bottom: 16px; }
+    .project .details-project .final-project div span {
+      font-size: 12px; }
+    .project .details-project .final-project div .value {
+      font-size: 11px; }
+
+  .tit-me {
+    margin-bottom: 10px; }
+    .tit-me h4 {
+      font-size: 17px;
+      padding-top: 4px; } }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  #demos {
+    margin: 10px 0; }
+    #demos .columns {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem; }
+      #demos .columns .owl-carousel button.owl-next, #demos .columns .owl-carousel button.owl-prev {
+        top: -215px;
+        width: 30px;
+        height: 30px; }
+
+  .project {
+    margin: 0px auto;
+    width: 100%; }
+    .project img {
+      height: 120px; }
+    .project .support-det .link-user {
+      color: #222;
+      padding: 10px 0;
+      display: inline-block;
+      transition: all 0.3s ease-in-out; }
+      .project .support-det .link-user:hover {
+        color: RGB(2, 176, 164); }
+    .project .support-det .socail-icons a {
+      display: inline-block;
+      margin: 10px 10px 15px;
+      width: 35px;
+      text-align: center;
+      line-height: 35px;
+      height: 35px;
+      border-radius: 50%;
+      box-shadow: 2px 2px 2px RGB(200, 200, 197); }
+      .project .support-det .socail-icons a i {
+        color: RGB(2, 176, 164); }
+    .project .lat-icons {
+      padding: 4px 0;
+      margin-bottom: 8px; }
+      .project .lat-icons div {
+        padding: 4px; }
+        .project .lat-icons div span {
+          padding: 0 1px;
+          font-size: 12px; }
+    .project .details-project h6 {
+      font-size: 14px; }
+    .project .details-project .who-project {
+      font-size: 12px; }
+      .project .details-project .who-project span {
+        font-size: 12px; }
+    .project .details-project .text-project {
+      font-size: 12px;
+      height: 38px; }
+    .project .details-project .packet-project, .project .details-project .location-project {
+      font-size: 12px;
+      margin-bottom: 4px; }
+      .project .details-project .packet-project span, .project .details-project .location-project span {
+        font-size: 12px; }
+      .project .details-project .packet-project i, .project .details-project .location-project i {
+        padding-left: 2px; }
+    .project .details-project .location-project {
+      margin-bottom: 16px; }
+    .project .details-project .final-project div span {
+      font-size: 12px; }
+    .project .details-project .final-project div .value {
+      font-size: 11px; }
+
+  .tit-me {
+    margin-bottom: 10px; }
+    .tit-me h4 {
+      font-size: 17px;
+      padding-top: 5px; } }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  #demos {
+    margin: 10px 0; }
+    #demos .columns {
+      padding-left: 2rem;
+      padding-right: 2rem; }
+      #demos .columns .owl-carousel button.owl-next, #demos .columns .owl-carousel button.owl-prev {
+        top: -277px;
+        width: 30px;
+        height: 30px; }
+
+  .project {
+    margin: 0px auto;
+    width: 100%; }
+    .project img {
+      height: 120px; }
+    .project .support-det .link-user {
+      color: #222;
+      padding: 10px 0;
+      display: inline-block;
+      transition: all 0.3s ease-in-out; }
+      .project .support-det .link-user:hover {
+        color: RGB(2, 176, 164); }
+    .project .support-det .socail-icons a {
+      display: inline-block;
+      margin: 10px 10px 15px;
+      width: 35px;
+      text-align: center;
+      line-height: 35px;
+      height: 35px;
+      border-radius: 50%;
+      box-shadow: 2px 2px 2px RGB(200, 200, 197); }
+      .project .support-det .socail-icons a i {
+        color: RGB(2, 176, 164); }
+    .project .lat-icons {
+      padding: 4px 0;
+      margin-bottom: 8px; }
+      .project .lat-icons div {
+        padding: 4px; }
+        .project .lat-icons div span {
+          padding: 0 1px;
+          font-size: 12px; }
+    .project .details-project h6 {
+      font-size: 14px; }
+    .project .details-project .who-project {
+      font-size: 12px; }
+      .project .details-project .who-project span {
+        font-size: 12px; }
+    .project .details-project .text-project {
+      font-size: 12px;
+      height: 38px; }
+    .project .details-project .packet-project, .project .details-project .location-project {
+      font-size: 12px;
+      margin-bottom: 4px; }
+      .project .details-project .packet-project span, .project .details-project .location-project span {
+        font-size: 12px; }
+      .project .details-project .packet-project i, .project .details-project .location-project i {
+        padding-left: 2px; }
+    .project .details-project .location-project {
+      margin-bottom: 16px; }
+    .project .details-project .final-project div span {
+      font-size: 12px; }
+    .project .details-project .final-project div .value {
+      font-size: 11px; }
+
+  .tit-me {
+    margin-bottom: 15px; }
+    .tit-me h4 {
+      font-size: 21px;
+      padding-top: 6px; } }
+@media (min-width: 992px) and (max-width: 1199px) {
+  #demos {
+    margin: 20px 0; }
+    #demos .columns {
+      padding-left: 2.9375rem;
+      padding-right: 2.9375rem; }
+      #demos .columns .owl-carousel button.owl-next, #demos .columns .owl-carousel button.owl-prev {
+        top: -277px; }
+
+  .project {
+    margin: 10px auto;
+    width: 100%; }
+    .project img {
+      height: 150px; }
+    .project .support-det {
+      text-align: center;
+      background: #fff; }
+      .project .support-det .link-user {
+        color: #222;
+        padding: 10px 0;
+        display: inline-block;
+        transition: all 0.3s ease-in-out; }
+        .project .support-det .link-user:hover {
+          color: RGB(2, 176, 164); }
+      .project .support-det .socail-icons a {
+        display: inline-block;
+        margin: 10px 10px 15px;
+        width: 35px;
+        text-align: center;
+        line-height: 35px;
+        height: 35px;
+        border-radius: 50%;
+        box-shadow: 2px 2px 2px RGB(200, 200, 197); }
+        .project .support-det .socail-icons a i {
+          color: RGB(2, 176, 164); }
+    .project .lat-icons {
+      padding: 5px 0;
+      margin-bottom: 12px; }
+      .project .lat-icons div {
+        padding: 5px; }
+        .project .lat-icons div span {
+          padding: 0 2px; }
+    .project .details-project .who-project {
+      font-size: 13px; }
+      .project .details-project .who-project span {
+        font-size: 13px; }
+    .project .details-project .text-project {
+      font-size: 13px; }
+    .project .details-project .packet-project, .project .details-project .location-project {
+      margin-bottom: 6px; }
+      .project .details-project .packet-project span, .project .details-project .location-project span {
+        font-size: 13px; }
+      .project .details-project .packet-project i, .project .details-project .location-project i {
+        padding-left: 3px; }
+
+  .tit-me {
+    margin-bottom: 20px; }
+    .tit-me h4 {
+      font-size: 23px;
+      padding-top: 6px; } }
+/*** End Media Queries ***/
+
+/*# sourceMappingURL=main.css.map */
